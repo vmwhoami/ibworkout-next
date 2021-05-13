@@ -3,7 +3,7 @@ const Trainer = () => (
     <h3 className="hcenter text-white">Tренер</h3>
     <a className="trainer__container" href="https://www.instagram.com/innabogdan/">
       <div className="trainer__imgcontainer">
-        <img src='/images/Inngirea.jpg' alt="Inna" />
+        <img src="/images/Inngirea.jpg" alt="Inna" />
       </div>
       <div className="trainer__description">
         <h1>Inna</h1>

@@ -12,27 +12,22 @@ import Footer from './pages/footer';
 // import Messenging from './messaging';
 // import Form from './pages/contact';
 
-
-
-const Layout = ({ children }) => {
-
-  return (
-    <>
-      <Nav />
-      <Head />
-      <How />
-      <Why />
-      <Steps />
-      <Trainer />
-      <Types />
-      {/* <Form />
+const Layout = ({ children }) => (
+  <>
+    <Nav />
+    <Head />
+    <How />
+    <Why />
+    <Steps />
+    <Trainer />
+    <Types />
+    {/* <Form />
       <Testimonials />
       <Messenging /> */}
-      <Footer />
-      {children}
-    </>
-  );
-};
+    <Footer />
+    {children}
+  </>
+);
 
 Layout.propTypes = {
   children: PropTypes.instanceOf(Object).isRequired,

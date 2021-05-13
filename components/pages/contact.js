@@ -1,4 +1,3 @@
-
 const Form = () => (
   <div className="form" id="form">
     <h3 className="hcenter text-white">Записаться на консультацию c тренером</h3>

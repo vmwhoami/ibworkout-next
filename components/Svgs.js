@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Logo = props => {
+const Logo = (props) => {
   const { styling } = props;
   return (
     <svg className={styling} id="icon-ibw" viewBox="0 0 102 32">
@@ -20,7 +20,7 @@ const Logo = props => {
   );
 };
 
-const Instagram = props => {
+const Instagram = (props) => {
   const { styling } = props;
   return (
     <svg className={styling} id="icon-instagram" viewBox="0 0 32 32">
@@ -30,7 +30,7 @@ const Instagram = props => {
     </svg>
   );
 };
-const Vk = props => {
+const Vk = (props) => {
   const { styling } = props;
   return (
     <svg className={styling} id="icon-vk1" viewBox="0 0 32 32">
@@ -38,7 +38,7 @@ const Vk = props => {
     </svg>
   );
 };
-const FaceBk = props => {
+const FaceBk = (props) => {
   const { styling } = props;
   return (
     <svg className={styling} id="icon-facebook-official" viewBox="0 0 24 28">

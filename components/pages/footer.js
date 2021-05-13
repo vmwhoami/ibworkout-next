@@ -1,4 +1,3 @@
-
 import {
   Logo, Instagram, Vk, FaceBk,
 } from '../Svgs';

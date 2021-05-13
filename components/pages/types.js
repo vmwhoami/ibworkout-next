@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 
 const Types = () => (
@@ -7,7 +6,7 @@ const Types = () => (
     <div className="types__container">
       <div className="types__training">
 
-        <Img adress='/images/functional.jpg' alt="functional" />
+        <Img adress="/images/functional.jpg" alt="functional" />
         <div className="types__desc">
           <h4>Функциональный тренинг</h4>
           <p>
@@ -54,7 +53,7 @@ const Types = () => (
   </div>
 );
 
-const Img = props => {
+const Img = (props) => {
   const { adress, alt } = props;
   return (
     <div className="types__imgcont">

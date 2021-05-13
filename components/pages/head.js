@@ -1,4 +1,5 @@
 import ProbeBtn from '../probeBtn';
+
 const Head = () => (
   <div className="head">
     <div className="head__bg" />

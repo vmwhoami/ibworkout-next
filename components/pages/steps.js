@@ -14,7 +14,7 @@ const Steps = () => (
     <div className="steps">
       <StepsLeft />
       <div className="steps__imgcon">
-        <img className="steps__img" src='/images/iphone12black.png ' alt="iphone12" />
+        <img className="steps__img" src="/images/iphone12black.png " alt="iphone12" />
       </div>
       <StepsRight />
     </div>

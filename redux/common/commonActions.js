@@ -1,7 +1,4 @@
-
 import { SUBMITTED, ERROR } from './commontTypes';
-
-
 
 const changeSubmitted = () => ({
   type: SUBMITTED,

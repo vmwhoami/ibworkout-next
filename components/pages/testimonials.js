@@ -7,7 +7,7 @@ const Testimonials = () => {
   const {
     name, image, comment, instaLink,
   } = users[index];
-  const checkNum = num => {
+  const checkNum = (num) => {
     if (num < 0) {
       return users.length - 1;
     } if (num > users.length - 1) {
@@ -16,13 +16,13 @@ const Testimonials = () => {
     return num;
   };
   const prevAction = () => {
-    setIndex(index => {
+    setIndex((index) => {
       const current = index - 1;
       return checkNum(current);
     });
   };
   const nextAction = () => {
-    setIndex(index => {
+    setIndex((index) => {
       const current = index + 1;
       return checkNum(current);
     });
@@ -43,8 +43,8 @@ const Testimonials = () => {
             </a>
             <p>{comment}</p>
             <div className="switch-container">
-              <button aria-label="previous-btn" type="button" className="switch-btn" onKeyDown={e => (e.key === 37 ? prevAction : null)} onClick={prevAction}><PrevIcon styling="switch-icon" /></button>
-              <button aria-label="next-btn" type="button" className="switch-btn" onKeyDown={e => (e.key === 40 ? nextAction : null)} onClick={nextAction}><NextIcon styling="switch-icon" /></button>
+              <button aria-label="previous-btn" type="button" className="switch-btn" onKeyDown={(e) => (e.key === 37 ? prevAction : null)} onClick={prevAction}><PrevIcon styling="switch-icon" /></button>
+              <button aria-label="next-btn" type="button" className="switch-btn" onKeyDown={(e) => (e.key === 40 ? nextAction : null)} onClick={nextAction}><NextIcon styling="switch-icon" /></button>
             </div>
           </div>
         </div>
