@@ -1,0 +1,63 @@
+.testimonials {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+
+  &__container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    width: 30rem;
+   height: 30rem;
+    border-radius: 50%;
+    border:1rem solid $footerbg;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    h5 {
+      padding-top: 1rem;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.switch-container{
+  display: flex;
+  min-width: 20vw;
+  justify-content: space-between;
+}
+
+.switch-btn{
+  border: none; 
+  background:none;
+}
+.switch-icon{
+  fill: $footerbg;
+  width: 5rem;
+  height: 5rem;
+}

@@ -1,10 +1,10 @@
-import '../styles/aplictation.scss';
+import '../styles/style.scss';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createWrapper } from 'next-redux-wrapper';
-import { motion } from 'framer-motion';
+
 import Layout from '../components/Layout';
 import store from '../redux/store';
 
