@@ -1,9 +1,5 @@
-import React from 'react';
+
 import PropTypes from 'prop-types';
-import functional from '../assets/images/functional.jpg';
-import silovie from '../assets/images/silovie.jpg';
-import yoga from '../assets/images/yoga.jpg';
-import weightloss from '../assets/images/weightloss.jpg';
 
 const Types = () => (
   <div className="types">
@@ -11,7 +7,7 @@ const Types = () => (
     <div className="types__container">
       <div className="types__training">
 
-        <Img adress={functional} alt="functional" />
+        <Img adress='/images/functional.jpg' alt="functional" />
         <div className="types__desc">
           <h4>Функциональный тренинг</h4>
           <p>
@@ -22,7 +18,7 @@ const Types = () => (
       </div>
 
       <div className="types__training">
-        <Img adress={silovie} alt="silovie" />
+        <Img adress="/images/silovie.jpg" alt="silovie" />
         <div className="types__desc">
           <h4>Силовой тренинг</h4>
           <p>
@@ -34,7 +30,7 @@ const Types = () => (
       </div>
 
       <div className="types__training">
-        <Img adress={yoga} alt="yoga" />
+        <Img adress="/images/yoga.jpg" alt="yoga" />
         <div className="types__desc">
           <h4>Пилатес и йога</h4>
           <p>
@@ -45,7 +41,7 @@ const Types = () => (
       </div>
 
       <div className="types__training">
-        <Img adress={weightloss} alt="weightloss" />
+        <Img adress="/images/weightloss.jpg" alt="weightloss" />
         <div className="types__desc">
           <h4>Снижение веса</h4>
           <p>

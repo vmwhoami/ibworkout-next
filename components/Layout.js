@@ -5,11 +5,11 @@ import Head from './pages/head';
 import How from './pages/how';
 import Why from './pages/why';
 import Steps from './pages/steps';
-// import Trainer from './pages/trainer';
-// import Types from './pages/types';
-// import Footer from './pages/footer';
+import Trainer from './pages/trainer';
+import Types from './pages/types';
+import Testimonials from './pages/testimonials';
+import Footer from './pages/footer';
 // import Messenging from './messaging';
-// import Testimonials from './pages/testimonials';
 // import Form from './pages/contact';
 
 
@@ -23,12 +23,12 @@ const Layout = ({ children }) => {
       <How />
       <Why />
       <Steps />
-      {/* <Trainer />
+      <Trainer />
       <Types />
+      {/* <Form />
       <Testimonials />
-      <Form />
-      <Footer />
       <Messenging /> */}
+      <Footer />
       {children}
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import users from '../users';
-import { Instagram, NextIcon, PrevIcon } from '../components/Svgs';
+import { Instagram, NextIcon, PrevIcon } from '../Svgs';
+// import users from '../users';
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
