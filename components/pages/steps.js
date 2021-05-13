@@ -1,9 +1,9 @@
 import React from 'react';
-import ProbeBtn from '../components/probeBtn';
-import iphone from '../assets/images/iphone12black.png';
+import ProbeBtn from '../probeBtn';
+// import iphone from ' /images/iphone12black.png';
 import {
   Barbel, Question, Present, Clock, Package, Trophy,
-} from '../components/Svgs';
+} from '../Svgs';
 
 const Steps = () => (
   <>
@@ -14,7 +14,7 @@ const Steps = () => (
     <div className="steps">
       <StepsLeft />
       <div className="steps__imgcon">
-        <img className="steps__img" src={iphone} alt="iphone12" />
+        <img className="steps__img" src='/images/iphone12black.png ' alt="iphone12" />
       </div>
       <StepsRight />
     </div>
