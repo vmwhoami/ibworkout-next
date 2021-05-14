@@ -1,31 +1,29 @@
-import path from 'path';
-import React, { useState } from 'react'
-import fs from 'fs';
-import { Instagram, NextIcon, PrevIcon } from '../Svgs';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Instagram, NextIcon, PrevIcon } from '../Svgs';
 
 const Testimonials = ({ testimonials }) => {
-  const { reviewes } = testimonials
+  const { reviews } = testimonials;
   const [index, setIndex] = useState(0);
   const {
     name, image, comment, instaLink,
-  } = reviewes[index];
-  const checkNum = num => {
+  } = reviews[index];
+  const checkNum = (num) => {
     if (num < 0) {
-      return reviewes.length - 1;
-    } if (num > reviewes.length - 1) {
+      return reviews.length - 1;
+    } if (num > reviews.length - 1) {
       return 0;
     }
     return num;
   };
   const prevAction = () => {
-    setIndex(index => {
+    setIndex((index) => {
       const current = index - 1;
       return checkNum(current);
     });
   };
   const nextAction = () => {
-    setIndex(index => {
+    setIndex((index) => {
       const current = index + 1;
       return checkNum(current);
     });
@@ -56,16 +54,8 @@ const Testimonials = ({ testimonials }) => {
   );
 };
 
-export async function getStaticProps() {
-  const filepath = path.join(process.cwd(), 'data', 'reviews.json');
-
-  const jsonData = await fs.readFile(filepath);
-  const data = JSON.parse(jsonData);
-
-  return {
-    props: {
-      reviews: data
-    },
-  };
+Testimonials.propTypes = {
+  testimonials: PropTypes.instanceOf(Object).isRequired,
 };
+
 export default Testimonials;

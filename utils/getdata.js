@@ -3,9 +3,9 @@ import fs from 'fs';
 
 const getData = async () => {
   const filepath = path.join(process.cwd(), 'data', 'reviews.json');
-  const jsonData = await fs.readFileSync(filepath)
+  const jsonData = await fs.readFileSync(filepath);
   const data = JSON.parse(jsonData);
-  return data
-}
+  return data;
+};
 
-export default getData
+export default getData;

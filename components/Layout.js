@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import Nav from './Nav';
 
-
 const Layout = ({ children }) => (
   <>
     <Nav />
