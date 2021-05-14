@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import getData from '../utils/getdata'
 import Heading from '../components/pages/head';
 import How from '../components/pages/how';
 import Why from '../components/pages/why';
@@ -9,7 +10,9 @@ import Testimonials from '../components/pages/testimonials';
 import Footer from '../components/pages/footer';
 import Messenging from '../components/messaging';
 import Form from '../components/pages/contact';
-export default function Home() {
+
+export default function Home(props) {
+
   return (
     <div>
       <Head>
@@ -23,10 +26,17 @@ export default function Home() {
       <Steps />
       <Trainer />
       <Types />
-      <Testimonials />
+      <Testimonials testimonials={props} />
       <Form />
       <Messenging />
       <Footer />
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const data = await getData()
+  return {
+    props: data,
+  };
+};

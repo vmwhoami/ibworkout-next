@@ -2,9 +2,23 @@
   "reviewes" : [
   {
     "id": 1,
-    "name": "Some Name",
-    "image": "/images/someone.jpg",
+    "name": "Inna Bogdan",
+    "image": "/images/Inngirea.jpg",
     "comment": "Рада, что познакомилась с IBWorkout! Я занимаюсь прямо с телефона с личным тренером тогда, когда мне удобно. Просто укладываю ребенка — и сразу готова включиться в тренировку: с залом такое невозможно.",
+    "instaLink": "/clients/olea.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Olga Pirvu",
+    "image": "/images/olea.jpg",
+    "comment": "  Просто укладываю ребенка — и сразу готова включиться в тренировку: с залом такое невозможно.",
+    "instaLink": "/clients/olea.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Some Client",
+    "image": "/images/mainphone.jpg",
+    "comment": "Рада, что познакомилась с IBWorkout! Я занимаюсь прямо с телефона с личным тренером тогда ",
     "instaLink": "/clients/olea.jpg"
   }
 ]
