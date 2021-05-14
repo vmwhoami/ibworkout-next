@@ -1,34 +1,25 @@
 const Form = () => (
   <div className="form" id="form">
     <h3 className="hcenter text-white">Записаться на консультацию c тренером</h3>
-    <form
-      action="POST"
-      name="contact"
-      className="form__form"
-      method="post"
-    >
-      <input
-        type="hidden"
-        name="form-name"
-        value="contact"
-      />
+    <form name="contact" className="form__form">
       <input
         type="text"
         placeholder="Ваше имя и фамилия"
-        name="Ваше имя и фамилия"
+        name="name"
       />
       <input
         type="email"
-        name="Email"
+        name="email"
         id="email"
         placeholder="E-mail"
       />
       <input
         type="tel"
-        name="Телефон"
-        id="telephone"
+        name="phone"
+        id="phone"
         placeholder="Телефон"
       />
+
       <div className="select">
         <select className="select__select" name=" цель  тренировок">
           <option value="">Выберите цель ваших тренировок</option>
@@ -71,7 +62,11 @@ const Form = () => (
         />
       </div>
       <div className="btncontainer">
-        <button type="submit" className="formbtn">Отправить</button>
+        <button
+          type="submit"
+          className="formbtn">
+          Отправить
+          </button>
       </div>
     </form>
   </div>
