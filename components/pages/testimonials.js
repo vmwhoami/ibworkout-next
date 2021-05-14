@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Instagram, NextIcon, PrevIcon } from '../Svgs';
-// import users from '../users';
+
 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
@@ -52,4 +52,10 @@ const Testimonials = () => {
     </div>
   );
 };
+
+export async function getStaticProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
 export default Testimonials;

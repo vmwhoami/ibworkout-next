@@ -9,8 +9,8 @@ import Trainer from './pages/trainer';
 import Types from './pages/types';
 import Testimonials from './pages/testimonials';
 import Footer from './pages/footer';
-// import Messenging from './messaging';
-// import Form from './pages/contact';
+import Messenging from './messaging';
+import Form from './pages/contact';
 
 const Layout = ({ children }) => (
   <>
@@ -21,9 +21,9 @@ const Layout = ({ children }) => (
     <Steps />
     <Trainer />
     <Types />
-    {/* <Form />
-      <Testimonials />
-      <Messenging /> */}
+    <Form />
+    {/* <Testimonials /> */}
+    <Messenging />
     <Footer />
     {children}
   </>
