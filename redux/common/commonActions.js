@@ -8,8 +8,8 @@ const submissionError = () => ({
   type: ERROR,
 });
 
-const submitData = (data) => async (dispatch) => {
+// const submitData = (data) => async (dispatch) => {
 
-};
+// };
 
-export { changeSubmitted, submitData, submissionError };
+export { changeSubmitted, submissionError };
