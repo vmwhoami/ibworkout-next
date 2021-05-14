@@ -1,16 +1,11 @@
 import React from 'react';
-import ProbeBtn from '../probeBtn';
-// import iphone from ' /images/iphone12black.png';
 import {
   Barbel, Question, Present, Clock, Package, Trophy,
 } from '../Svgs';
 
 const Steps = () => (
   <>
-    <ProbeBtn styling="head__btn center" />
-    <h3 className="hcenter">
-      Начните заниматься с тренером за несколько шагов
-    </h3>
+
     <div className="steps">
       <StepsLeft />
       <div className="steps__imgcon">
@@ -18,7 +13,7 @@ const Steps = () => (
       </div>
       <StepsRight />
     </div>
-    <ProbeBtn styling="head__btn center mb-5" />
+
   </>
 );
 

@@ -64,7 +64,7 @@ const MobileNav = () => {
 const DescktopNav = () => (
   <div className="nav__container">
     <div className="nav__logo">
-      <a className="logo__atag" target="blank" href="#trainer">
+      <a className="logo__atag" href="#">
         <Logo styling="logo__svg" />
       </a>
     </div>
