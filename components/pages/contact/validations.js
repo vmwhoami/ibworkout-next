@@ -1,15 +1,19 @@
 const validation = (values) => {
   const errors = {};
-  const { name, email, message } = values;
+  const { name, email, message, phone } = values;
   /* eslint-disable-next-line */
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!name.trim()) {
-    errors.name = 'A name is required!';
+    errors.name = 'Имя обязательно!';
   }
   if (!email) {
-    errors.email = 'An email is required!';
+    errors.email = 'Электронная почта, которую вы указали, недействительна!';
   } else if (!re.test(email)) {
-    errors.email = 'Email adress is invalid!';
+    errors.email = 'Необходимо указать адрес электронной почты!';
+  }
+
+  if (!phone) {
+    errors.phone = 'Номер телефона обязателен!';
   }
 
   if (!message || message.length < 6) {

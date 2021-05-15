@@ -12,7 +12,7 @@ const Form = () => {
 
     <div className="form" id="form">
       <h3 className="hcenter text-white">Записаться на консультацию c тренером</h3>
-      <form name="contact" className="form__form">
+      <form name="contact" className="form__form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Ваше имя и фамилия"
@@ -37,7 +37,8 @@ const Form = () => {
           onChange={handleChange}
         />
 
-        <Select />
+        <Select value={values.comment}
+          onChange={handleChange} />
 
         <div className="textarea">
           <textarea

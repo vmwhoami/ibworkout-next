@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-
 const useForm = (validation) => {
   const dispatch = useDispatch();
   const [values, setValues] = useState({
     name: '',
     email: '',
     phone: '',
-    select: 'Выберите цель ваших тренировок',
+    select: '',
     comment: '',
   });
   const [errors, setErrors] = useState({});
