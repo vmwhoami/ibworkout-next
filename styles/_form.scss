@@ -3,6 +3,7 @@
   position: relative;
   padding: 1rem;
 
+
   &::before {
     content: "";
     position: absolute;
@@ -39,6 +40,10 @@
       border: none;
       margin: 2rem;
     }
+  }
+  p{
+    padding: 0 2rem;
+    color: rgb(255, 0, 0);
   }
 }
 
@@ -97,15 +102,13 @@
 .phone{
   
   padding: 0 2rem ;
-
+  margin: 2rem 0;
   &_input{
     width: 100% !important;
+ 
    }
 }
 
  
 
-
-.phone_container{
-  width: 100%;
-}
+ 

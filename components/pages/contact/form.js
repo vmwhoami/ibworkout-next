@@ -21,6 +21,7 @@ const Form = () => {
           value={values.name}
           onChange={handleChange}
         />
+        {errors.name && <p>{errors.name}</p>}
         <input
           type="email"
           name="email"
@@ -29,17 +30,19 @@ const Form = () => {
           onChange={handleChange}
           placeholder="E-mail"
         />
+        {errors.email && <p>{errors.email}</p>}
         <PhoneInput
           country={'md'}
           containerClass={"phone"}
           inputClass={"phone_input"}
+          inputStyle={{ paddingTop: 25, paddingBottom: 25 }}
           name="phone"
           id="phone"
           placeholder={"Введите номер телефона"}
           value={values.phone}
           onChange={handleChange}
         />
-
+        {errors.phone && <p>{errors.phone}</p>}
         <Select value={values.comment}
           handleChange={handleChange} />
 

@@ -7,18 +7,18 @@ const validation = (values) => {
     errors.name = 'Имя обязательно!';
   }
   if (!email) {
-    errors.email = 'Электронная почта, которую вы указали, недействительна!';
-  } else if (!re.test(email)) {
     errors.email = 'Необходимо указать адрес электронной почты!';
+  } else if (!re.test(email)) {
+    errors.email = 'Электронная почта, которую вы указали, недействительна!';
   }
 
   if (!phone) {
     errors.phone = 'Номер телефона обязателен!';
   }
 
-  if (!message || message.length < 6) {
-    errors.message = 'A full message is required!';
-  }
+  // if (!message || message.length < 6) {
+  //   errors.message = 'A full message is required!';
+  // }
 
   return errors;
 };
