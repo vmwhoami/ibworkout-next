@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
 const useForm = (validation) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [values, setValues] = useState({
     name: '',
@@ -31,7 +31,7 @@ const useForm = (validation) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(validation(values));
-    console.log(errors);
+    console.log(values);
     // dispatch(submitData(values));
   };
 
