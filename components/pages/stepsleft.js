@@ -1,4 +1,5 @@
 import { Barbel, Question, Present } from '../Svgs';
+
 const StepsLeft = () => (
   <div className="steps__left">
     <div className="steps__wrapper reverse">

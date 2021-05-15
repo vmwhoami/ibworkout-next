@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Nav from './Nav';
+import Nav from './navbar/Nav';
 
 const Layout = ({ children }) => (
   <>

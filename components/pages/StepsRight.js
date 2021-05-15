@@ -39,5 +39,4 @@ const StepsRight = () => (
   </div>
 );
 
-
 export default StepsRight;

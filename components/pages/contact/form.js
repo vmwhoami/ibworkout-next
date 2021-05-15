@@ -1,11 +1,11 @@
-import React from 'react'
-import Select from './select'
+import React from 'react';
+import PhoneInput from 'react-phone-input-2';
+import Select from './select';
 import useForm from './useForm';
 import validations from './validations';
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
-const Form = () => {
+import 'react-phone-input-2/lib/style.css';
 
+const Form = () => {
   const {
     handleChange, handleSubmit, values, errors,
   } = useForm(validations);
@@ -32,19 +32,21 @@ const Form = () => {
         />
         {errors.email && <p>{errors.email}</p>}
         <PhoneInput
-          country={'md'}
-          containerClass={"phone"}
-          inputClass={"phone_input"}
+          country="md"
+          containerClass="phone"
+          inputClass="phone_input"
           inputStyle={{ paddingTop: 25, paddingBottom: 25 }}
           name="phone"
           id="phone"
-          placeholder={"Введите номер телефона"}
+          placeholder="Введите номер телефона"
           value={values.phone}
           onChange={handleChange}
         />
         {errors.phone && <p>{errors.phone}</p>}
-        <Select value={values.comment}
-          handleChange={handleChange} />
+        <Select
+          value={values.comment}
+          handleChange={handleChange}
+        />
 
         <div className="textarea">
           <textarea
@@ -61,13 +63,14 @@ const Form = () => {
         <div className="btncontainer">
           <button
             type="submit"
-            className="formbtn">
+            className="formbtn"
+          >
             Отправить
           </button>
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;
