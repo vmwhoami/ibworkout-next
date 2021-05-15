@@ -1,7 +1,6 @@
 import React from 'react'
 import Select from './select'
 import useForm from './useForm';
-
 import validations from './validations';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -32,10 +31,11 @@ const Form = () => {
         />
         <PhoneInput
           country={'md'}
-          type="tel"
+          containerClass={"phone"}
+          inputClass={"phone_input"}
           name="phone"
           id="phone"
-          placeholder="Введите номер телефона"
+          placeholder={"Введите номер телефона"}
           value={values.phone}
           onChange={handleChange}
         />

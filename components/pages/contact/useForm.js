@@ -26,8 +26,6 @@ const useForm = (validation) => {
         [name]: value,
       });
     }
-
-
   };
 
   const handleSubmit = (e) => {
