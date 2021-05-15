@@ -7,8 +7,9 @@ const useForm = (validation) => {
   const [values, setValues] = useState({
     name: '',
     email: '',
-    subject: '',
-    message: '',
+    phone: '',
+    select: 'Выберите цель ваших тренировок',
+    comment: '',
   });
   const [errors, setErrors] = useState({});
 

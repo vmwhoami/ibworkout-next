@@ -2,7 +2,7 @@ import React from 'react'
 
 const Select = () => {
   const options = [
-    "Выберите цель ваших тренировок",
+
     "Держать все тело в тонусе",
     "Прокачка мышц пресса, ног и ягодиц",
     "Увеличение силы / набор массы",
@@ -17,11 +17,11 @@ const Select = () => {
 
   return (
     <div className="select">
-      <select className="select__select" name="select">
+      <select className="select__select" name="select" id="select">
         {options.map(option => {
           return (
             <option key={genKey()} value={option}>
-              option
+              {option}
             </option>
           )
         })}

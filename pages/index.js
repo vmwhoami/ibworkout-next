@@ -9,7 +9,7 @@ import Types from '../components/pages/types';
 import Testimonials from '../components/pages/testimonials';
 import Footer from '../components/pages/footer';
 import Messenging from '../components/messaging';
-import Form from '../components/pages/contact';
+import Form from '../components/pages/contact/form';
 
 export default function Home(props) {
   return (
