@@ -1,7 +1,10 @@
 import React from 'react'
 import Select from './select'
 import useForm from './useForm';
+
 import validations from './validations';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 const Form = () => {
 
   const {
@@ -9,7 +12,6 @@ const Form = () => {
   } = useForm(validations);
 
   return (
-
     <div className="form" id="form">
       <h3 className="hcenter text-white">Записаться на консультацию c тренером</h3>
       <form name="contact" className="form__form" onSubmit={handleSubmit}>
@@ -28,17 +30,18 @@ const Form = () => {
           onChange={handleChange}
           placeholder="E-mail"
         />
-        <input
+        <PhoneInput
+          country={'md'}
           type="tel"
           name="phone"
           id="phone"
-          placeholder="Телефон"
+          placeholder="Введите номер телефона"
           value={values.phone}
           onChange={handleChange}
         />
 
         <Select value={values.comment}
-          onChange={handleChange} />
+          handleChange={handleChange} />
 
         <div className="textarea">
           <textarea

@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 
 const useForm = (validation) => {
   const dispatch = useDispatch();
+
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -13,11 +14,20 @@ const useForm = (validation) => {
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setValues({
-      ...values,
-      [name]: value,
-    });
+    if (!e.target) {
+      setValues({
+        ...values,
+        phone: e,
+      });
+    } else {
+      const { name, value } = e.target;
+      setValues({
+        ...values,
+        [name]: value,
+      });
+    }
+
+
   };
 
   const handleSubmit = (e) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Select = ({ onchange }) => {
+const Select = ({ handleChange }) => {
   const options = [
     'Выберите цель ваших тренировок',
     "Держать все тело в тонусе",
@@ -17,7 +17,7 @@ const Select = ({ onchange }) => {
 
   return (
     <div className="select">
-      <select className="select__select" name="select" id="select" onSelect={onchange}>
+      <select className="select__select" name="select" id="select" onChange={handleChange}>
         {options.map(option => {
           return (
             <option key={genKey()} value={option}>
