@@ -31,7 +31,7 @@ const useForm = (validation) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(validation(values));
-    console.log(values);
+
     // dispatch(submitData(values));
   };
 

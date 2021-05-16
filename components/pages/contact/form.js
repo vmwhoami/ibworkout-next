@@ -1,6 +1,5 @@
 import React from 'react';
 import PhoneInput from 'react-phone-input-2';
-import Select from './select';
 import useForm from './useForm';
 import validations from './validations';
 import 'react-phone-input-2/lib/style.css';
@@ -9,6 +8,19 @@ const Form = () => {
   const {
     handleChange, handleSubmit, values, errors,
   } = useForm(validations);
+
+  const options = [
+    "Выберите цель ваших тренировок",
+    'Держать все тело в тонусе',
+    'Прокачка мышц пресса, ног и ягодиц',
+    'Увеличение силы / набор массы',
+    'Снижение веса',
+    'Здоровая спина ',
+    'Йога / Пилатес для здоровья',
+    'Улучшить гибкость и растяжку',
+  ];
+
+  const genKey = () => Math.random().toString(36).slice(2, 10);
 
   return (
     <div className="form" id="form">
@@ -43,10 +55,17 @@ const Form = () => {
           onChange={handleChange}
         />
         {errors.phone && <p>{errors.phone}</p>}
-        <Select
-          value={values.comment}
-          handleChange={handleChange}
-        />
+
+        <div className="select">
+          <select className="select__select" name="select" id="select" value={values.select} onChange={handleChange}>
+            {options.map((option) => (
+              <option key={genKey()} value={option}>
+                {option}
+              </option>
+
+            ))}
+          </select>
+        </div>
 
         <div className="textarea">
           <textarea
