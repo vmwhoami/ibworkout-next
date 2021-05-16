@@ -1,5 +1,6 @@
-const Select = ({ handleChange, value }) => {
+import PropTypes from 'prop-types';
 
+const Select = ({ handleChange, value }) => {
   const options = [
     'Держать все тело в тонусе',
     'Прокачка мышц пресса, ног и ягодиц',
@@ -14,11 +15,10 @@ const Select = ({ handleChange, value }) => {
   return (
     <div className="select">
       <select className="select__select" name="select" id="select" value={value} onChange={(e) => handleChange(e)}>
-        <option key={genKey()} value='Выберите цель ваших тренировок'>
+        <option key={genKey()} value="Выберите цель ваших тренировок">
           Выберите цель ваших тренировок
-          </option>
+        </option>
         {options.map((option) => (
-
 
           <option key={genKey()} value={option}>
             {option}
@@ -30,4 +30,8 @@ const Select = ({ handleChange, value }) => {
   );
 };
 
+Select.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  value: PropTypes.instanceOf(Object).isRequired,
+};
 export default Select;
