@@ -10,11 +10,11 @@ const commonReducer = (state = initial, action) => {
   switch (action.type) {
     case SUBMITTED:
       return {
-        ...state, submitted: true, error: false, errors: []
+        submitted: true, error: false, errors: []
       };
     case ERROR:
       return {
-        ...state, error: true, errors: Object.values(action.payload)
+        error: true, errors: Object.values(action.payload)
       };
     default:
       return state;

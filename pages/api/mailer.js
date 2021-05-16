@@ -10,6 +10,6 @@ export default (req, res) => {
       res.status(206).json({ errors: errors })
       return
     }
-    res.status(200).json({ success: "Message sent" })
+    return res.status(200).json({ success: "Message sent" })
   }
 };

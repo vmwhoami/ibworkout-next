@@ -21,7 +21,6 @@ const submitData = (data) => async (dispatch) => {
     dispatch(submissionError(errors))
   }
   if (response.status === 200) {
-    console.log(response.data.success);
     dispatch(changeSubmitted())
   }
 };
