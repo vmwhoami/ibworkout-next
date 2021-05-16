@@ -62,7 +62,6 @@ const Form = () => {
               <option key={genKey()} value={option}>
                 {option}
               </option>
-
             ))}
           </select>
         </div>

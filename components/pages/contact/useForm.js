@@ -1,8 +1,8 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-
+import { useDispatch } from 'react-redux';
+import { submitData } from '../../../redux/common/commonActions'
 const useForm = (validation) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const [values, setValues] = useState({
     name: '',
@@ -32,7 +32,7 @@ const useForm = (validation) => {
     e.preventDefault();
     setErrors(validation(values));
 
-    // dispatch(submitData(values));
+    dispatch(submitData(values));
   };
 
   return {
