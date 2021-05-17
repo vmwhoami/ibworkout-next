@@ -32,39 +32,41 @@ const Testimonials = ({ testimonials }) => {
     <div className="testimonials" id="testimonials">
       <h3 className="hcenter">Отзывы наших клиентов</h3>
       <div className="testimonials__container">
-        <div className="client">
-          <div className="client__comment">
-            <div className="client__img">
-              <img src={image} alt="client" />
-            </div>
 
+        <div className="client__comment">
+
+          <div className="client__img">
+            <img src={image} alt="client" />
+          </div>
+          <div className="client__name">
             <h5>{name}</h5>
-            <a className="nav__roundbtn" target="blank" href={instaLink}>
+            <a className="nav__roundbtn client__svg" target="blank" href={instaLink}>
               <Instagram styling="nav__svg" />
             </a>
-            <p>{comment}</p>
-            <div className="switch-container">
-              <button
-                aria-label="previous-btn"
-                type="button"
-                className="switch-btn"
-                onKeyDown={(e) => (e.key === 37 ? prevAction : null)}
-                onClick={prevAction}
-              >
-                <PrevIcon styling="switch-icon" />
-              </button>
-              <button
-                aria-label="next-btn"
-                type="button"
-                className="switch-btn"
-                onKeyDown={(e) => (e.key === 40 ? nextAction : null)}
-                onClick={nextAction}
-              >
-                <NextIcon styling="switch-icon" />
-              </button>
-            </div>
           </div>
+          <p>{comment}</p>
+
+          <button
+            aria-label="previous-btn"
+            type="button"
+            className="switchbtn left"
+            onKeyDown={(e) => (e.key === 37 ? prevAction : null)}
+            onClick={prevAction}
+          >
+            <PrevIcon styling="switch-icon" />
+          </button>
+          <button
+            aria-label="next-btn"
+            type="button"
+            className="switchbtn right"
+            onKeyDown={(e) => (e.key === 40 ? nextAction : null)}
+            onClick={nextAction}
+          >
+            <NextIcon styling="switch-icon" />
+          </button>
+
         </div>
+
       </div>
     </div>
   );

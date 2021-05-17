@@ -1,63 +1,90 @@
 .testimonials {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
 
   &__container {
-    max-width: 80rem;
-    margin: 0 auto;
+    max-width: 75rem;
+    margin: 10rem auto 0 auto;
   }
 }
 
 .client {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__img {
-    width: 30rem;
-   height: 30rem;
-    border-radius: 50%;
-    border:1rem solid $footerbg;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit:cover;
-      border-radius: 50%;
-    }
-  }
-
   &__comment {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 20%) 0 1px 3px;
+    position: relative;
 
     p {
       margin-bottom: 1rem;
+      padding: 2rem;
     }
 
     h5 {
       padding-top: 1rem;
+      padding-right: 1rem;
       font-size: 2.5rem;
+      color: $purple;
+    }
+  }
+
+  &__svg {
+    background-color: $purple;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 1rem solid $purple;
+    background-color: honeydew;
+    margin-top: -10rem;
+    box-shadow: 1px -1px 8px -1px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 1px -1px 8px -1px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 1px -1px 8px -1px rgba(0, 0, 0, 0.36);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
 }
 
-.switch-container{
-  display: flex;
-  min-width: 20vw;
-  justify-content: space-between;
+.switchbtn {
+  position: absolute;
+  border: none;
+  background: none;
+  outline: none;
 }
 
-.switch-btn{
-  border: none; 
-  background:none;
-}
-.switch-icon{
-  fill: $footerbg;
+.switch-icon {
+  fill: $purple;
   width: 5rem;
   height: 5rem;
+}
+
+.left {
+  left: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
 }

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { submitData } from '../../../redux/common/commonActions'
+import { useSelector } from 'react-redux';
+
 const useForm = (validation) => {
   const dispatch = useDispatch();
-
+  const submitted = useSelector((state) => state.commonReducer.submitted);
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -28,10 +30,10 @@ const useForm = (validation) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrors(validation(values));
-    if (!Object.values(errors).length > 0) {
+    await setErrors(validation(values));
+    if (Object.values(errors).length === 0) {
       dispatch(submitData(values));
     }
   };

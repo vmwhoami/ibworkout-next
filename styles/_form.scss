@@ -3,7 +3,6 @@
   position: relative;
   padding: 1rem;
 
-
   &::before {
     content: "";
     position: absolute;
@@ -41,7 +40,8 @@
       margin: 2rem;
     }
   }
-  p{
+
+  p {
     padding: 0 2rem;
     color: rgb(255, 0, 0);
   }
@@ -99,16 +99,12 @@
   font-size: 2rem;
   text-transform: uppercase;
 }
-.phone{
-  
-  padding: 0 2rem ;
+
+.phone {
+  padding: 0 2rem;
   margin: 2rem 0;
-  &_input{
+
+  &_input {
     width: 100% !important;
- 
-   }
+  }
 }
-
- 
-
- 
