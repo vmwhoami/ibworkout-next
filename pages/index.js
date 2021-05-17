@@ -9,7 +9,7 @@ import Types from '../components/pages/types';
 import Testimonials from '../components/pages/testimonials';
 import Footer from '../components/pages/footer';
 import Messenging from '../components/messaging';
-import Form from '../components/pages/contact/form';
+import Contact from '../components/pages/contact/contact';
 
 export default function Home(props) {
   return (
@@ -26,7 +26,7 @@ export default function Home(props) {
       <Trainer />
       <Types />
       <Testimonials testimonials={props} />
-      <Form />
+      <Contact />
       <Messenging />
       <Footer />
     </div>

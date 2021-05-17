@@ -1,5 +1,7 @@
 import validation from '../../components/pages/contact/validations'
 import SaveToDb from '../../utils/saveaToDb'
+import sendEmail from '../../utils/mailing'
+
 export default (req, res) => {
   if (req.method === 'POST') {
     const name = req.body.name
@@ -13,8 +15,8 @@ export default (req, res) => {
       return
     } else {
       SaveToDb({ name, email, phone, comment, select })
+      sendEmail({ name, email, phone, comment, select })
       return res.status(200).json({ success: "Message sent" })
     }
-
   }
 };

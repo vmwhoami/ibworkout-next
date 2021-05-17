@@ -12,7 +12,7 @@ const sendEmail = async (options) => {
   };
   const transport = nodemailer.createTransport(sendgrid(opt));
   await transport.sendMail({
-    to: 'vmwhoami@gmail.com',
+    to: 'vitalimelnic@yahoo.com',
     from: 'thenewyoungcoder@gmail.com',
     subject: 'New message from ibworkout',
     html: `<h2>You have got an email from ${name}</h2>
