@@ -21,7 +21,7 @@ const MobileNav = () => {
         id="nav"
         className="navigation-checkbox"
       />
-      <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
+
       <label htmlFor="nav" className="navigation-handle">
         <span className="navigation-icon">&nbsp;</span>
       </label>

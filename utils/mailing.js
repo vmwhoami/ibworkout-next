@@ -1,5 +1,5 @@
-const nodemailer = require('nodemailer');
-const sendgrid = require('nodemailer-sendgrid-transport');
+import nodemailer from 'nodemailer';
+import sendgrid from 'nodemailer-sendgrid-transport';
 
 const sendEmail = async (options) => {
   const {
