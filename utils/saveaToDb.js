@@ -10,7 +10,7 @@ const SaveToDb = async (info) => {
     await client.connect();
     const database = client.db('contacts');
     const contact = database.collection('contacts');
-    contact.insertOne(info);
+    await contact.insertOne(info);
 
   } finally {
     await client.close();
