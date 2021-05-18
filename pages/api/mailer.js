@@ -2,7 +2,7 @@ import validation from '../../components/pages/contact/validations'
 import SaveToDb from '../../utils/saveaToDb'
 import sendEmail from '../../utils/mailing'
 
-export default (req, res) => {
+module.exports = (req, res) => {
   if (req.method === 'POST') {
     const name = req.body.name
     const email = req.body.email
