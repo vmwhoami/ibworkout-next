@@ -1,6 +1,5 @@
-import { MongoClient } from "mongodb";
+const MongoClient = require("mongodb");
 const SaveToDb = async (info) => {
-
   const client = new MongoClient(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
