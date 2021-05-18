@@ -1,25 +1,6 @@
 import validation from '../../components/pages/contact/validations'
+import SaveToDb from '../../utils/saveaToDb'
 import sendEmail from '../../utils/mailing'
-
-const MongoClient = require("mongodb");
-const SaveToDb = async (info) => {
-  const client = new MongoClient(process.env.MONGO, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-
-  try {
-    await client.connect();
-    const database = client.db('contacts');
-    const contact = database.collection('contacts');
-    await contact.insertOne(info);
-
-  } finally {
-    await client.close();
-  }
-
-}
-
 
 module.exports = (req, res) => {
   if (req.method === 'POST') {
@@ -36,7 +17,7 @@ module.exports = (req, res) => {
       try {
         SaveToDb({ name, email, phone, comment, select })
       } catch (error) {
-        console.log(error);
+        res.status(404).json(error)
       }
 
       sendEmail({ name, email, phone, comment, select })
