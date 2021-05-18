@@ -1,4 +1,5 @@
-const MongoClient = require("mongodb");
+import { MongoClient } from "mongodb";
+
 const SaveToDb = async (info) => {
   const client = new MongoClient(process.env.MONGO, {
     useNewUrlParser: true,
@@ -9,10 +10,11 @@ const SaveToDb = async (info) => {
     await client.connect();
     const database = client.db('contacts');
     const contact = database.collection('contacts');
-    await contact.insertOne(info);
-
-  } finally {
-    await client.close();
+    const result = await contact.insertOne(info);
+    return result
+  }
+  finally {
+    client.close();
   }
 
 }
