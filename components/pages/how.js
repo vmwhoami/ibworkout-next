@@ -1,5 +1,5 @@
 import Iframe from 'react-iframe';
-
+import ReactPlayer from "react-player";
 const How = () => (
   <div className="how">
     <div className="how__h1">
@@ -16,9 +16,10 @@ const How = () => (
       </p>
     </div>
     <div className="how__vidcont">
+
       <Iframe
         className="how__vid"
-        src="https://www.youtube.com/embed/ASwpaa74RGo"
+        src="https://www.youtube.com/embed/esUFUlA__as"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen=""
