@@ -1,10 +1,13 @@
 import React from 'react';
+import { motion } from "framer-motion"
 import {
   MessageSvg, MessengerSvg, WhatAppSvg, PhoneSvg, ViberSvg,
 } from './Svgs';
 
 const Messenging = () => (
-  <div className="messanging">
+  <motion.div
+
+    className="messanging">
     <input className="messanging__checkbox" type="checkbox" name="checkbox" id="toggle" />
 
     <label className="messanging__label" htmlFor="toggle">
@@ -24,7 +27,7 @@ const Messenging = () => (
     <a href="viber://chat?number=+37369136177" target="blank" className="messanging__viber shaper">
       <ViberSvg styling="messanging__svg" />
     </a>
-  </div>
+  </motion.div>
 );
 
 export default Messenging;

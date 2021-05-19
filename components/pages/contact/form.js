@@ -23,7 +23,7 @@ const Form = () => {
   const genKey = () => Math.random().toString(36).slice(2, 10);
 
   return (
-    <div className="form" id="form">
+    <div className="form" >
       <h3 className="hcenter text-white">Записаться на консультацию c тренером</h3>
       <form name="contact" className="form__form" onSubmit={handleSubmit}>
         <input

@@ -30,6 +30,7 @@
     font-size: 2rem;
     font-family: $futuraMd;
     height: 100%;
+    font-weight: 500;
   }
 
 
@@ -43,6 +44,11 @@
     position: relative;
     height: 100%;
     align-items: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 400;
 
     &::after {
       content: '';
@@ -98,6 +104,7 @@
   align-items: center;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .logo__svg {

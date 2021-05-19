@@ -1,4 +1,6 @@
 import SocialBtns from '../SocialBtns';
+import Link from 'next/link'
+
 import { Logo } from '../Svgs';
 
 const DescktopNav = () => {
@@ -17,9 +19,16 @@ const DescktopNav = () => {
         </button>
       </div>
       <div className="nav__list">
-        <a className="nav__lsitem" href="#trainer"> Тренер</a>
-        <a className="nav__lsitem" href="#testimonials">Отзывы</a>
-        <a className="nav__lsitem" href="#form">Записаться</a>
+        <Link href="#trainer">
+          <a className="nav__lsitem" > Тренер</a>
+        </Link>
+        <Link href="#testimonials">
+          <a className="nav__lsitem">Отзывы</a>
+        </Link>
+        <Link href="#form">
+          <a className="nav__lsitem" >Записаться</a>
+        </Link>
+
       </div>
       <SocialBtns />
     </div>
