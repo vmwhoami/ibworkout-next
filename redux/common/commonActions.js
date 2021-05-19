@@ -11,18 +11,24 @@ const submissionError = (errors) => ({
 });
 
 const submitData = (data) => async (dispatch) => {
-  const response = await axios({
-    method: 'post',
-    url: '/api/mailer',
-    data: data
-  });
-  if (response.status === 206) {
-    const { errors } = response.data
-    dispatch(submissionError(errors))
+
+
+  try {
+    const response = await axios({
+      method: 'post',
+      url: 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/ibworkout',
+      data: data
+    });
+
+    if (response.data.status === "success") {
+      dispatch(changeSubmitted())
+    }
+
+  } catch (error) {
+
+    dispatch(submissionError(error))
   }
-  if (response.status === 200) {
-    dispatch(changeSubmitted())
-  }
+
 };
 
 export { changeSubmitted, submissionError, submitData };
