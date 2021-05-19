@@ -1,5 +1,4 @@
 import Iframe from 'react-iframe';
-import ReactPlayer from "react-player";
 const How = () => (
   <div className="how">
     <div className="how__h1">
