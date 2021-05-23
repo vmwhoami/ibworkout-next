@@ -2,6 +2,8 @@ import StepsLeft from './stepsleft';
 import StepsRight from './StepsRight';
 import { useInView } from 'react-hook-inview'
 import { motion } from "framer-motion"
+import Image from 'next/image'
+
 const Steps = () => {
   const [ref, inView] = useInView()
   const visible = { y: 0, opacity: 1 }
@@ -17,7 +19,13 @@ const Steps = () => {
         animate={inView ? visible : nonvisible}
         transition={trans}
         className="steps__imgcon">
-        <img className="steps__img" src="/images/iphone12black.png " alt="iphone12" />
+        <Image className="steps__img"
+          src="/images/iphone12black.png "
+          alt="iphone12"
+          width={500}
+          height={900}
+
+        />
       </motion.div>
       <StepsRight />
     </div>

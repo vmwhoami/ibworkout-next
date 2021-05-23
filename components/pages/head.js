@@ -2,9 +2,11 @@ import ProbeBtn from '../probeBtn';
 import { useInView } from 'react-hook-inview'
 import { motion } from "framer-motion"
 const Head = () => {
-  const [ref, inView] = useInView()
-
   const ease = [0.34, 1.56, 0.64, 1];
+  const [ref, inView] = useInView()
+  const visible = { opacity: 1, y: 0 }
+  const nonvisible = { opacity: 0, y: 200 }
+  const transitition = { ease: ease, duration: .5, delay: 1 }
 
   return (
     <div ref={ref} className="head">
@@ -12,10 +14,10 @@ const Head = () => {
       <motion.div
         className="head__container">
         <motion.h1
-          initial={{ opacity: 0, y: 400 }}
-          transition={{ ease: ease, duration: .8 }}
-          animate={{ opacity: 1, y: 0 }}
-          easing={ease}
+
+          transition={transitition}
+          animate={inView ? visible : nonvisible}
+
           className="head__h1">Онлайн-тренировки с личным тренером</motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -38,7 +40,6 @@ const Head = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 2, ease: ease, duration: .5 }}
-
         >
           < ProbeBtn styling="head__btn" />
         </motion.div>
