@@ -19,11 +19,10 @@ const Steps = () => {
         animate={inView ? visible : nonvisible}
         transition={trans}
         className="steps__imgcon">
-        <Image className="steps__img"
+        <img className="steps__img"
           src="/images/iphone12black.png "
           alt="iphone12"
-          width={500}
-          height={900}
+
 
         />
       </motion.div>
