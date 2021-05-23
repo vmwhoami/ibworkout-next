@@ -1,10 +1,13 @@
 import ProbeBtn from '../probeBtn';
+import { useInView } from 'react-hook-inview'
 import { motion } from "framer-motion"
 const Head = () => {
+  const [ref, inView] = useInView()
+
   const ease = [0.34, 1.56, 0.64, 1];
 
   return (
-    <div className="head">
+    <div ref={ref} className="head">
       <div className="head__bg" />
       <motion.div
         className="head__container">

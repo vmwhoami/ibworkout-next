@@ -89,7 +89,7 @@
   &-nav {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -200px;
     height: 100vh;
     z-index: 200;
     width: 0;
@@ -142,6 +142,7 @@
   }
 
   &-checkbox:checked ~ &-nav {
+    left: 0;
     width: 100%;
     opacity: 1;
   }

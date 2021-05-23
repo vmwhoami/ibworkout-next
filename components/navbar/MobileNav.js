@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import Link from 'next/link'
 import { Logo } from '../Svgs';
 
 const MobileNav = () => {
@@ -29,13 +30,19 @@ const MobileNav = () => {
       <div className="navigation-nav">
         <ul className="navigation-list">
           <li className="navigation-item">
-            <a href="#trainer" className="navigation-link" onClick={unsetCheckbox}> Тренер </a>
+            <Link href="#trainer" >
+              <a className="navigation-link" onClick={unsetCheckbox}> Тренер </a>
+            </Link>
           </li>
           <li className="navigation-item">
-            <a href="#testimonials" className="navigation-link" onClick={unsetCheckbox}> Отзывы</a>
+            <Link href="#testimonials" >
+              <a className="navigation-link" onClick={unsetCheckbox} > Отзывы</a>
+            </Link>
           </li>
           <li className="navigation-item">
-            <a href="#form" className="navigation-link" onClick={unsetCheckbox}> Записаться</a>
+            <Link href="#form" >
+              <a className="navigation-link" onClick={unsetCheckbox} > Записаться</a>
+            </Link>
           </li>
         </ul>
       </div>
