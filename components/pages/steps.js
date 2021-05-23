@@ -2,7 +2,7 @@ import StepsLeft from './stepsleft';
 import StepsRight from './StepsRight';
 import { useInView } from 'react-hook-inview'
 import { motion } from "framer-motion"
-import Image from 'next/image'
+
 
 const Steps = () => {
   const [ref, inView] = useInView()

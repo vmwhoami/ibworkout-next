@@ -6,7 +6,7 @@ const Head = () => {
   const [ref, inView] = useInView()
   const visible = { opacity: 1, y: 0 }
   const nonvisible = { opacity: 0, y: 200 }
-  const transitition = { ease: ease, duration: .5, delay: 1 }
+  const transitition = { ease: ease, duration: .5 }
 
   return (
     <div ref={ref} className="head">

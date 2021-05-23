@@ -1,6 +1,6 @@
 import { useInView } from 'react-hook-inview'
 import { motion } from "framer-motion"
-import Image from 'next/image'
+
 
 const Trainer = () => {
   const [ref, inView] = useInView()
@@ -8,7 +8,7 @@ const Trainer = () => {
   const nonvisible = { y: 200, opacity: 0 }
   const trans = {
     delay: 1,
-    default: { duration: .5 },
+    default: { duration: 1 },
   }
   return (
     <div ref={ref} className="trainer" id="trainer">
@@ -19,11 +19,9 @@ const Trainer = () => {
 
         className="trainer__container" href="https://www.instagram.com/innabogdan/">
         <div className="trainer__imgcontainer">
-          <Image
+          <img
             src="/images/Inngirea.jpg"
             alt="Inna"
-            width={1000}
-            height={650}
           />
         </div>
         <div className="trainer__description">
