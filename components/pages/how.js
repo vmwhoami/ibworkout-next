@@ -31,12 +31,12 @@ const How = () => {
         transition={trans}
         className="how__description">
         <p>
-          Вы занимаетесь с персональным тренером по видеосвязи.
+        You are working with a personal trainer via video link.
         {' '}
           <br />
-        Всё, что вам нужно, — это ноутбук или телефон с веб-камерой, интернет
+          All you need is a laptop or phone with a webcam, internet
         <br />
-        и немного свободного пространства (2 м от камеры).
+        and some free space (2 m from the camera).
       </p>
       </motion.div>
       <motion.div

@@ -17,11 +17,11 @@ const StepsLeft = () => {
         transition={trans}
         className="steps__wrapper reverse">
         <div className="steps__textwrap">
-          <h4>Выберите тип тренинга</h4>
+          <h4>Choose the type of training</h4>
           <p>
-            Каждый из них решает разные задачи:
-            помогает снизить вес, поддерживает тело в форме,
-            укрепляет мышечный корсет или работает с растяжкой.
+             Each of them solves different tasks:
+             helps reduce weight, keeps the body in shape,
+             strengthens the muscular corset or works with stretching.
         </p>
         </div>
         <div className="steps__svgwrap">
@@ -35,10 +35,10 @@ const StepsLeft = () => {
 
         className="steps__wrapper reverse">
         <div className="steps__textwrap">
-          <h4>Оставьте заявку</h4>
+          <h4>Leave a request</h4>
           <p>
-            Заполните короткую анкету, и мы составим для
-            вас оптимальную программу.
+          Fill out a short form and we will choose
+             your optimal program.
         </p>
         </div>
         <div className="steps__svgwrap">
@@ -53,10 +53,10 @@ const StepsLeft = () => {
 
         className="steps__wrapper reverse">
         <div className="steps__textwrap">
-          <h4>Пройдите пробную тренировку</h4>
+          <h4>TJoin a free trial workout</h4>
           <p>
-            Начните заниматься с выбранным тренером бесплатно:
-            так вы поймете, подходят ли вам программа и формат занятий.
+             Get started with your chosen trainer for free:
+             you will be able to understand whether the program and the format of the classes are right for you.
         </p>
         </div>
 

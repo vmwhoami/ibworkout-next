@@ -18,24 +18,24 @@ const Head = () => {
           transition={transitition}
           animate={inView ? visible : nonvisible}
 
-          className="head__h1">Онлайн-тренировки с личным тренером</motion.h1>
+          className="head__h1">Online training with a personal trainer.</motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           transition={{ delay: .5, duration: .5 }}
           animate={{ opacity: 1 }}
-        >В реальном времени.</motion.p>
+        >In real time.</motion.p>
         <motion.p
           initial={{ opacity: 0 }}
           transition={{ delay: 1, duration: .5 }}
           animate={{ opacity: 1 }}
 
-        >Когда удобно.</motion.p>
+        >When it's convenient.</motion.p>
         <motion.p
 
           initial={{ opacity: 0 }}
           transition={{ delay: 1.5, duration: .5 }}
           animate={{ opacity: 1 }}
-        >Где удобно.</motion.p>
+        >Where is convenient.</motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
