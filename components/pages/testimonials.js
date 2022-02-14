@@ -30,7 +30,7 @@ const Testimonials = ({ testimonials }) => {
   };
   return (
     <div className="testimonials" id="testimonials">
-      <h3 className="hcenter">Отзывы наших клиентов</h3>
+      <h3 className="hcenter">Testimonials</h3>
       <div className="testimonials__container">
 
         <div className="client__comment">

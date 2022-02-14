@@ -10,7 +10,7 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="form" id="form">
-        <h3 className="hcenter text-white">Cпасибо мы скоро с вами свяжемся!!!</h3></motion.div></AnimatePresence> : <AnimatePresence>
+        <h3 className="hcenter text-white">Thank you we will contact you soon!!!</h3></motion.div></AnimatePresence> : <AnimatePresence>
         <motion.div
           id="form"
           initial={{ opacity: 1 }}

@@ -31,17 +31,17 @@ const MobileNav = () => {
         <ul className="navigation-list">
           <li className="navigation-item">
             <Link href="#trainer" >
-              <a className="navigation-link" onClick={unsetCheckbox}> Тренер </a>
+              <a className="navigation-link" onClick={unsetCheckbox}> Trainer </a>
             </Link>
           </li>
           <li className="navigation-item">
             <Link href="#testimonials" >
-              <a className="navigation-link" onClick={unsetCheckbox} > Отзывы</a>
+              <a className="navigation-link" onClick={unsetCheckbox} > Testimonials</a>
             </Link>
           </li>
           <li className="navigation-item">
             <Link href="#form" >
-              <a className="navigation-link" onClick={unsetCheckbox} > Записаться</a>
+              <a className="navigation-link" onClick={unsetCheckbox} > Join a training</a>
             </Link>
           </li>
         </ul>

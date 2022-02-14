@@ -20,13 +20,13 @@ const DescktopNav = () => {
       </div>
       <div className="nav__list">
         <Link href="#trainer">
-          <a className="nav__lsitem" > Тренер</a>
+          <a className="nav__lsitem" > Trainer</a>
         </Link>
         <Link href="#testimonials">
-          <a className="nav__lsitem">Отзывы</a>
+          <a className="nav__lsitem">Testimonials</a>
         </Link>
         <Link href="#form">
-          <a className="nav__lsitem" >Записаться</a>
+          <a className="nav__lsitem" >Join a training</a>
         </Link>
 
       </div>
