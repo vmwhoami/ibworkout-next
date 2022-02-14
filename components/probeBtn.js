@@ -6,7 +6,7 @@ const ProbeBtn = (props) => {
   const { styling } = props;
   return (
     <Link href="#form">
-      <a className={styling}>Записаться на пробную тренировку</a>
+      <a className={styling}>Sign up for a trial workout</a>
     </Link>
   );
 };
