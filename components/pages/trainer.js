@@ -12,7 +12,7 @@ const Trainer = () => {
   }
   return (
     <div ref={ref} className="trainer" id="trainer">
-      <h3 className="hcenter text-white">Tренер</h3>
+      <h3 className="hcenter text-white">Trainer</h3>
       <motion.a
         animate={inView ? visible : nonvisible}
         transition={trans}
@@ -26,11 +26,9 @@ const Trainer = () => {
         </div>
         <div className="trainer__description">
           <h1>Inna</h1>
-          <h3>Силовые, функциональные, стретчинг</h3>
-          <p>
-            Инструктор тренажерного зала, персональный тренер, стретчинг,
-            «Первая школа фитнеса», г. Москва. У Анны высшее образование по физической культуре и
-            13-летний опыт в спорте и фитнесе.
+          <h3>Strength, functional, stretching</h3>
+          <p>Gym instructor, personal trainer, stretching, Inna has a higher education in physical education and
+            20 years of experience in dance sports and fitness.
         </p>
         </div>
       </motion.a>

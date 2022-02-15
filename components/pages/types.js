@@ -10,7 +10,7 @@ const Types = () => {
   }
   return (
     <div ref={ref} className="types">
-      <h3 className="hcenter">Типы тренинга</h3>
+      <h3 className="hcenter">Types of training</h3>
       <motion.div
         animate={inView ? "open" : "closed"}
         variants={variants}
@@ -22,10 +22,10 @@ const Types = () => {
 
           <Img adress="/images/functional.jpg" alt="functional" />
           <motion.div className="types__desc">
-            <h4>Функциональный тренинг</h4>
-            <p>
-              Развивает выносливость и улучшает общий
-              тонус организма — появится больше сил и мотивации для других задач.
+            <h4>Functional training</h4>
+            <p>            
+              Develops stamina and improves overall
+              body tone - there will be more strength and motivation for other tasks.
           </p>
           </motion.div>
         </motion.div>
@@ -35,11 +35,11 @@ const Types = () => {
           className="types__training">
           <Img adress="/images/silovie.jpg" alt="silovie" />
           <div className="types__desc">
-            <h4>Силовой тренинг</h4>
-            <p>
-              Развивает мышцы за счет тренировок с собственным
-              весом или утяжелителями — упражнения помогают создать
-              красивый рельеф и прийти в спортивную форму.
+            <h4>Strength trainingг</h4>
+            <p>              
+              Develop muscles through training with own
+              weight or weights - exercises help create
+              beautiful relief and get in shape.
           </p>
           </div>
         </motion.div>
