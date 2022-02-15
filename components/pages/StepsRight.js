@@ -23,8 +23,8 @@ const StepsRight = () => {
 
         </div>
         <div className="steps__textwrap">
-          <h4>Запланируйте занятия</h4>
-          <p>Выберите удобное время и регулярно занимайтесь с персональным тренером.</p>
+          <h4>Schedule a private training</h4>
+          <p>Choose a convenient time and work out regularly with a personal trainer.</p>
         </div>
       </motion.div>
 
@@ -36,12 +36,11 @@ const StepsRight = () => {
           <Package />
         </div>
         <div className="steps__textwrap">
-          <h4>Выберите пакет тренировок</h4>
+          <h4>Choose a training package</h4>
           <p>
-            Определите комфортную нагрузку и
-            тренируйтесь один, два или три раза в
-            неделю от 825 руб./час.
-        </p>
+            Determine the number of classes and the duration of the training.
+            Choose the program that suits you best.
+           </p>
         </div>
       </motion.div>
 
@@ -55,8 +54,8 @@ const StepsRight = () => {
           <Trophy />
         </div>
         <div className="steps__textwrap">
-          <h4>Достигайте результата</h4>
-          <p>Добивайтесь целей с рекомендациями вашего наставника.</p>
+          <h4>Achieve the desired results</h4>
+          <p>Reach your goals with the guidance of your mentor.</p>
         </div>
       </motion.div>
     </div>

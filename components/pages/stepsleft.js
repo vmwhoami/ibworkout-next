@@ -53,7 +53,7 @@ const StepsLeft = () => {
 
         className="steps__wrapper reverse">
         <div className="steps__textwrap">
-          <h4>TJoin a free trial workout</h4>
+          <h4>To join a free trial workout</h4>
           <p>
              Get started with your chosen trainer for free:
              you will be able to understand whether the program and the format of the classes are right for you.
