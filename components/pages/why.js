@@ -20,8 +20,8 @@ const Why = () => {
         animate={inView ? visible : nonvisibleh}
         transition={trans}
 
-        className="why__heading white-color">Почему это удобно?</motion.h2>
-      <p className="why__p white-color">Тренируйтесь в комфортном ритме когда угодно и где угодно</p>
+        className="why__heading white-color">Why is this confortable?</motion.h2>
+      <p className="why__p white-color">Train at your own pace anytime, anywhere</p>
 
       <motion.div className="why__container">
         <motion.div
@@ -30,7 +30,7 @@ const Why = () => {
 
           className="why__section">
           <img className="why__img" src="/images/plan.png" alt="plan" />
-          <p className="white-color">План занятий составляем индивидуально: он учитывает ваш образ жизни, цели и физические возможности</p>
+          <p className="white-color">We draw up an individual workout plan: it takes into account your lifestyle, goals and physical capabilities</p>
         </motion.div>
 
         <motion.div
