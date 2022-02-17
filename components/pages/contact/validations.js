@@ -7,16 +7,16 @@ const validation = (values) => {
   /* eslint-disable-next-line */
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!name.trim()) {
-    errors.name = 'Имя обязательно!';
+    errors.name = 'Name is required';
   }
   if (!email) {
-    errors.email = 'Необходимо указать адрес электронной почты!';
+    errors.email = 'Email is required';
   } else if (!re.test(email)) {
-    errors.email = 'Электронная почта, которую вы указали, недействительна!';
+    errors.email = 'Email is invalid';
   }
 
   if (!phone) {
-    errors.phone = 'Номер телефона обязателен!';
+    errors.phone = 'Phone is required';
   }
 
   // if (!message || message.length < 6) {

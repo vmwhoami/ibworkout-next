@@ -35,7 +35,7 @@ const Types = () => {
           className="types__training">
           <Img adress="/images/silovie.jpg" alt="silovie" />
           <div className="types__desc">
-            <h4>Strength trainingг</h4>
+            <h4>Strength training</h4>
             <p>              
               Develop muscles through training with own
               weight or weights - exercises help create
@@ -47,10 +47,9 @@ const Types = () => {
         <div className="types__training">
           <Img adress="/images/yoga.jpg" alt="yoga" />
           <div className="types__desc">
-            <h4>Пилатес и йога</h4>
+            <h4>Pilates and yoga</h4>
             <p>
-              Восстанавливают эластичность мышц, работают с растяжкой —
-              этот тренинг помогает расслабиться и повысить гибкость тела.
+            Increases muscle strength and tone, particularly of your abdominal muscles, lower back, hips and buttocks (the 'core muscles' of your body). Balanced muscular strength on both sides of your body
           </p>
           </div>
         </div>
@@ -58,10 +57,10 @@ const Types = () => {
         <div className="types__training">
           <Img adress="/images/weightloss.jpg" alt="weightloss" />
           <div className="types__desc">
-            <h4>Снижение веса</h4>
+            <h4>Weight loss</h4>
             <p>
-              Сочетает интенсивные силовые и
-              функциональные тренировки — они помогут снизить вес и прийти в форму.
+            Combines intense strength and
+              functional training - will help you lose weight and get in shape.
           </p>
           </div>
         </div>

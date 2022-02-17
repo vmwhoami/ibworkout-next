@@ -10,14 +10,14 @@ const Form = () => {
   } = useForm(validations);
 
   const options = [
-    "Выберите цель ваших тренировок",
-    'Держать все тело в тонусе',
-    'Прокачка мышц пресса, ног и ягодиц',
-    'Увеличение силы / набор массы',
-    'Снижение веса',
-    'Здоровая спина ',
-    'Йога / Пилатес для здоровья',
-    'Улучшить гибкость и растяжку',
+    "Choose the purpose of your training",
+    'Keep the whole body in good shape',
+    'Pumping the muscles of the press, legs and buttocks',
+    'Increased strength / mass gain',
+    'Weight loss',
+    'Healthy back',
+    'Yoga / Pilates for health',
+    'Improve flexibility and strength',
   ];
 
   const genKey = () => Math.random().toString(36).slice(2, 10);
@@ -28,7 +28,7 @@ const Form = () => {
       <form name="contact" className="form__form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Ваше имя и фамилия"
+          placeholder="Name and surname"
           name="name"
           value={values.name}
           onChange={handleChange}
@@ -50,7 +50,7 @@ const Form = () => {
           inputStyle={{ paddingTop: 25, paddingBottom: 25 }}
           name="phone"
           id="phone"
-          placeholder="Введите номер телефона"
+          placeholder="Enter phone number"
           value={values.phone}
           onChange={handleChange}
         />
@@ -73,7 +73,7 @@ const Form = () => {
             value={values.comment}
             onChange={handleChange}
             className="textarea__text"
-            placeholder="Укажите, пожалуйста, ваш город или часовой пояс. Как с вами связаться (телефон, whatsapp и т.д.) и в какое время? Промокод (если есть) и прочие комментарии."
+            placeholder="Please enter your city or time zone. How can I contact you (phone, whatsapp, etc.) and what time? "
             rows="4"
             spellCheck="false"
           />
@@ -83,7 +83,7 @@ const Form = () => {
             type="submit"
             className="formbtn"
           >
-            Отправить
+            Send
           </button>
         </div>
       </form>
