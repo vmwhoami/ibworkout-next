@@ -38,7 +38,7 @@ const Why = () => {
           transition={trans}
           className="why__section">
           <img className="why__img" src="/images/coin.png" alt="coin" />
-          <p className="white-color">Регулярная работа с личным тренером в онлайн-режиме стоит в несколько раз дешевле занятий с тренером в зале</p>
+          <p className="white-color">Regular workout with a personal trainer online is several times cheaper than training with a instructor in a gym</p>
         </motion.div>
 
         <motion.div
@@ -46,7 +46,7 @@ const Why = () => {
           transition={trans}
           className="why__section">
           <img className="why__img" src="/images/trainer.png" alt="plan" />
-          <p className="white-color">Регулярная работа с личным тренером в онлайн-режиме стоит в несколько раз дешевле занятий с тренером в зале</p>
+          <p className="white-color">Safe and suitable programming is one of the top benefits of personal training and particularly important if you have any contraindications to exercise, injuries, pre/post natal or post menopausal </p>
         </motion.div>
       </motion.div>
     </div>
