@@ -35,7 +35,7 @@ const Head = () => {
           initial={{ opacity: 0 }}
           transition={{ delay: 1.5, duration: .5 }}
           animate={{ opacity: 1 }}
-        >Where is convenient.</motion.p>
+        >Where it is convenient.</motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
