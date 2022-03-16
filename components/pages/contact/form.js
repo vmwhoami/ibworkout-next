@@ -24,7 +24,7 @@ const Form = () => {
 
   return (
     <div className="form" >
-      <h3 className="hcenter text-white">Записаться на консультацию c тренером</h3>
+      <h3 className="hcenter text-white">Book a session with our coach</h3>
       <form name="contact" className="form__form" onSubmit={handleSubmit}>
         <input
           type="text"

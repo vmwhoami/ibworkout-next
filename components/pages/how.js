@@ -23,7 +23,7 @@ const How = () => {
         animate={inView ? visible : nonvisible}
         transition={trans}
         className="how__h1">
-        <h1 className="text-center">Как проходит тренировка?</h1>
+        <h1 className="text-center">What does a workout session look like</h1>
       </motion.div>
       <motion.div
 
