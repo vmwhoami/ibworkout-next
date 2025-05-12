@@ -1,4 +1,17 @@
-@import "variables","nav","mobilenav","head" ,'how','why','steps','messanging','trainer','types','pricing','testimonials','form','footer';
+@use "variables";
+@use "nav";
+@use "mobilenav";
+@use "head";
+@use 'how';
+@use 'why';
+@use 'steps';
+@use 'messanging';
+@use 'trainer';
+@use 'types';
+@use 'pricing';
+@use 'testimonials';
+@use 'form';
+@use 'footer';
 
 * {
   padding: 0;

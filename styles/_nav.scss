@@ -1,3 +1,5 @@
+@use "variables";
+
 .nav {
   position: fixed;
   top: 0;
@@ -26,7 +28,7 @@
     display: flex;
     list-style: none;
     font-size: 2rem;
-    font-family: $futuraMd;
+    font-family: variables.$futuraMd;
     height: 100%;
     font-weight: 500;
   }
