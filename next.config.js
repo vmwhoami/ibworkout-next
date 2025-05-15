@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    includePaths: ['./src/styles'],
+    includePaths: ['./styles'],
   },
 };
 

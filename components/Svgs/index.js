@@ -1,0 +1,17 @@
+export { default as Logo } from './Logo';
+export { default as Instagram } from './Instagram';
+export { default as Vk } from './Vk';
+export { default as FaceBk } from './FaceBk';
+export { default as Barbel } from './Barbel';
+export { default as Question } from './Question';
+export { default as Present } from './Present';
+export { default as Clock } from './Clock';
+export { default as Package } from './Package';
+export { default as Trophy } from './Trophy';
+export { default as MessageSvg } from './MessageSvg';
+export { default as MessengerSvg } from './MessengerSvg';
+export { default as WhatAppSvg } from './WhatAppSvg';
+export { default as PhoneSvg } from './PhoneSvg';
+export { default as ViberSvg } from './ViberSvg';
+export { default as NextIcon } from './NextIcon';
+export { default as PrevIcon } from './PrevIcon';

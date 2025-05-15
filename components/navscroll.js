@@ -17,14 +17,14 @@ export default function scrollfade() {
   }
 
   const navbarFade = () => {
-    const nav = document.querySelector('.nav');
+    const nav = document.querySelector(".nav");
     const scroll = window.pageYOffset;
     if (scroll > 20) {
-      nav.classList.add('faded');
+      nav.classList.add("faded");
     } else {
-      nav.classList.remove('faded');
+      nav.classList.remove("faded");
     }
   };
 
-  window.addEventListener('scroll', debounce(navbarFade));
+  window.addEventListener("scroll", debounce(navbarFade));
 }

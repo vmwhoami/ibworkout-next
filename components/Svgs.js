@@ -1,3 +1,4 @@
+'use client'; // Add this at the very top
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -30,6 +31,8 @@ const Instagram = (props) => {
     </svg>
   );
 };
+
+
 const Vk = (props) => {
   const { styling } = props;
   return (
