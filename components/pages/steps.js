@@ -1,3 +1,4 @@
+'use client';
 import StepsLeft from './stepsleft';
 import StepsRight from './StepsRight';
 import { useInView } from 'react-hook-inview'

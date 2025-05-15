@@ -1,3 +1,5 @@
+'use client';
+
 import { Clock, Package, Trophy } from '../Svgs';
 import { useInView } from 'react-hook-inview'
 import { motion } from "framer-motion"
