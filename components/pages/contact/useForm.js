@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { submitData } from '../../../redux/common/commonActions'
+'use client';
 
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { submitData } from '../../../redux/common/commonActions';
 
 const useForm = (validation) => {
   const dispatch = useDispatch();
-
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -15,31 +15,37 @@ const useForm = (validation) => {
   });
   const [errors, setErrors] = useState({});
 
+  // Add useEffect to handle validation updates
+  useEffect(() => {
+    if (Object.keys(errors).length === 0) {
+      // Optional: Add any side effects after successful validation
+    }
+  }, [errors]);
+
   const handleChange = (e) => {
     if (!e.target) {
-      setValues({
-        ...values,
-        phone: e,
-      });
+      setValues(prev => ({ ...prev, phone: e }));
     } else {
       const { name, value } = e.target;
-      setValues({
-        ...values,
-        [name]: value,
-      });
+      setValues(prev => ({ ...prev, [name]: value }));
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await setErrors(validation(values));
-    if (Object.values(errors).length === 0) {
+    const validationErrors = validation(values);
+    await setErrors(validationErrors);
+    
+    if (Object.keys(validationErrors).length === 0) {
       dispatch(submitData(values));
     }
   };
 
   return {
-    handleChange, handleSubmit, values, errors,
+    handleChange,
+    handleSubmit,
+    values,
+    errors,
   };
 };
 

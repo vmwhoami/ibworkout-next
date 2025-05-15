@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Instagram, NextIcon, PrevIcon } from '../Svgs';
@@ -8,39 +10,38 @@ const Testimonials = ({ testimonials }) => {
   const {
     name, image, comment, instaLink,
   } = reviews[index];
+
   const checkNum = (num) => {
-    if (num < 0) {
-      return reviews.length - 1;
-    } if (num > reviews.length - 1) {
-      return 0;
-    }
+    if (num < 0) return reviews.length - 1;
+    if (num > reviews.length - 1) return 0;
     return num;
   };
+
   const prevAction = () => {
-    setIndex((index) => {
-      const current = index - 1;
-      return checkNum(current);
-    });
+    setIndex(prev => checkNum(prev - 1));
   };
+
   const nextAction = () => {
-    setIndex((index) => {
-      const current = index + 1;
-      return checkNum(current);
-    });
+    setIndex(prev => checkNum(prev + 1));
   };
+
+  const handleKeyNavigation = (e, action) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+      action();
+    }
+  };
+
   return (
     <div className="testimonials" id="testimonials">
       <h3 className="hcenter">Testimonials</h3>
       <div className="testimonials__container">
-
         <div className="client__comment">
-
           <div className="client__img">
-            <img src={image} alt="client" />
+            <img src={image} alt="client" loading="lazy" />
           </div>
           <div className="client__name">
             <h5>{name}</h5>
-            <a className="nav__roundbtn client__svg" target="blank" href={instaLink}>
+            <a className="nav__roundbtn client__svg" target="_blank" rel="noopener noreferrer" href={instaLink}>
               <Instagram styling="nav__svg" />
             </a>
           </div>
@@ -50,7 +51,7 @@ const Testimonials = ({ testimonials }) => {
             aria-label="previous-btn"
             type="button"
             className="switchbtn left"
-            onKeyDown={(e) => (e.key === 37 ? prevAction : null)}
+            onKeyDown={(e) => handleKeyNavigation(e, prevAction)}
             onClick={prevAction}
           >
             <PrevIcon styling="switch-icon" />
@@ -59,21 +60,26 @@ const Testimonials = ({ testimonials }) => {
             aria-label="next-btn"
             type="button"
             className="switchbtn right"
-            onKeyDown={(e) => (e.key === 40 ? nextAction : null)}
+            onKeyDown={(e) => handleKeyNavigation(e, nextAction)}
             onClick={nextAction}
           >
             <NextIcon styling="switch-icon" />
           </button>
-
         </div>
-
       </div>
     </div>
   );
 };
 
 Testimonials.propTypes = {
-  testimonials: PropTypes.instanceOf(Object).isRequired,
+  testimonials: PropTypes.shape({
+    reviews: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      comment: PropTypes.string.isRequired,
+      instaLink: PropTypes.string.isRequired,
+    })).isRequired,
+  }).isRequired,
 };
 
 export default Testimonials;
