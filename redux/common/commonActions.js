@@ -1,3 +1,4 @@
+// commonReducer.js
 import axios from 'axios'
 import { SUBMITTED, ERROR } from './commontTypes';
 
