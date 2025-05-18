@@ -1,3 +1,5 @@
+'use client'
+
 import SocialBtns from "../SocialBtns";
 import Link from "next/link";
 

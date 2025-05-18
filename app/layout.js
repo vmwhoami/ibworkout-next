@@ -1,3 +1,5 @@
+
+ 
 // app/layout.js
 import '../styles/style.scss';
 import { Providers } from './providers';
