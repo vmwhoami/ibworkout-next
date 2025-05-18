@@ -5,7 +5,7 @@ import Form from './form';
 import { useSelector } from 'react-redux';
 
 const Contact = () => {
-  const submitted = useSelector(state => state.commonReducer.submitted);
+  const submitted = useSelector(state => state.common.submitted);
   return (
     <>
       <AnimatePresence mode="wait">

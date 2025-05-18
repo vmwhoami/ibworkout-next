@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from "motion/react"
 import {
   MessageSvg, MessengerSvg, WhatAppSvg, PhoneSvg, ViberSvg,
 } from './Svgs';
+import { i } from 'motion/react-client';
 
 const Messenging = () => (
   <motion.div
