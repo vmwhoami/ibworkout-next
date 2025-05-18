@@ -9,14 +9,12 @@ export const metadata = {
     template: '%s | Inna Bogdan Personal Trainer',
     default: 'Inna Bogdan Personal Trainer',
   },
+
   description: 'Inna Bogdan vmwhoami - Personal Training Services',
+
   icons: {
     icon: '/favicon.ico',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
+  }
 }
 
 export default function RootLayout({ children }) {
@@ -30,3 +28,8 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1
+};

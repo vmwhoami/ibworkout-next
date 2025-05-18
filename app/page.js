@@ -15,7 +15,7 @@ import Footer from "../components/pages/footer";
 // Metadata
 export const metadata = {
   title: "Inna Bogdan Personal Trainer",
-  description: "Inna Bogdan vmwhoami",
+  description: "Inna Bogdan vmwhoami"
 };
 
 async function getTestimonialData() {
