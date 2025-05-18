@@ -14,13 +14,13 @@ const Footer = () => (
         </button>
       </div>
       <div className="footer__socialbtns">
-        <Link className="footer__roundbtn" target="blank" href="https://www.instagram.com/innabogdan/">
+        <Link className="footer__roundbtn" target="_blank" href="https://www.instagram.com/innabogdan/">
           <Instagram styling="footer__svg" />
         </Link>
-        <Link className="footer__roundbtn" target="blank" href="http://">
+        {/* <Link className="footer__roundbtn" target="_blank" href="http://">
           <Vk styling="footer__svg" />
-        </Link>
-        <Link className="footer__roundbtn" target="blank" href="https://www.facebook.com/profile.php?id=100026188263111">
+        </Link> */}
+        <Link className="footer__roundbtn" target="_blank" href="https://www.facebook.com/profile.php?id=100026188263111">
           <FaceBk styling="footer__svg" />
         </Link>
       </div>

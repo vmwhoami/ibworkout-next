@@ -1,16 +1,14 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Instagram, NextIcon, PrevIcon } from '../Svgs';
-import Link from 'next/link';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { Instagram, NextIcon, PrevIcon } from "../Svgs";
+import Link from "next/link";
 
 const Testimonials = ({ testimonials }) => {
   const { reviews } = testimonials;
   const [index, setIndex] = useState(0);
-  const {
-    name, image, comment, instaLink,
-  } = reviews[index];
+  const { name, image, comment, instaLink } = reviews[index];
 
   const checkNum = (num) => {
     if (num < 0) return reviews.length - 1;
@@ -19,15 +17,15 @@ const Testimonials = ({ testimonials }) => {
   };
 
   const prevAction = () => {
-    setIndex(prev => checkNum(prev - 1));
+    setIndex((prev) => checkNum(prev - 1));
   };
 
   const nextAction = () => {
-    setIndex(prev => checkNum(prev + 1));
+    setIndex((prev) => checkNum(prev + 1));
   };
 
   const handleKeyNavigation = (e, action) => {
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
       action();
     }
   };
@@ -42,7 +40,12 @@ const Testimonials = ({ testimonials }) => {
           </div>
           <div className="client__name">
             <h5>{name}</h5>
-            <Link className="nav__roundbtn client__svg" target="_blank" rel="noopener noreferrer" href={instaLink}>
+            <Link
+              className="nav__roundbtn client__svg"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={instaLink}
+            >
               <Instagram styling="nav__svg" />
             </Link>
           </div>
@@ -74,12 +77,14 @@ const Testimonials = ({ testimonials }) => {
 
 Testimonials.propTypes = {
   testimonials: PropTypes.shape({
-    reviews: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      comment: PropTypes.string.isRequired,
-      instaLink: PropTypes.string.isRequired,
-    })).isRequired,
+    reviews: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        comment: PropTypes.string.isRequired,
+        instaLink: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   }).isRequired,
 };
 
