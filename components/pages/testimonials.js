@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Instagram, NextIcon, PrevIcon } from '../Svgs';
+import Link from 'next/link';
 
 const Testimonials = ({ testimonials }) => {
   const { reviews } = testimonials;

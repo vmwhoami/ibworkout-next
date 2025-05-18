@@ -35,7 +35,7 @@ export default async function Home() {
       <Trainer />
       <Types />
       <Suspense fallback={<div>Loading testimonials...</div>}>
-        <Testimonials testimonials={testimonialData} />
+        <Testimonials testimonials={{ reviews: testimonialData }} />
       </Suspense>
       <Contact />
       <Messenging />
