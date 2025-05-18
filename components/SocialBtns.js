@@ -1,4 +1,5 @@
 import { Instagram, Vk, FaceBk } from "./Svgs";
+import Link from "next/link";
 
 const SocialBtns = () => (
   <div className="nav__socialbtns">

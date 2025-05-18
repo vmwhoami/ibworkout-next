@@ -1,5 +1,4 @@
-'use client'
-
+ 
 import Heading from '../components/pages/head';
 import How from '../components/pages/how';
 import Why from '../components/pages/why';
