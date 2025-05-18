@@ -1,27 +1,25 @@
 {
-  "reviews" : [
-  {
-    "id": 1,
-    "name": "Olga Gurgurova",
-    "image": "/images/glucova.jpg",
-    "comment": "Glad to have met IBWorkout! I train directly from my phone with a personal trainer when it suits me. I just put the child to bed and I'm immediately ready to join the training: this is impossible going to a gym",
-    "instaLink": "https://www.instagram.com/olga.gurgurova/"
-  },
-  {
-    "id": 2,
-    "name": "Olga Pirvu",
-    "image": "/images/olea.jpg",
-    "comment": " Good day everyone! I want to write a review. No, rather thanks to Inna Bogdan. I am one of those people who start to lose weight or get in shape 'on Monday.' As a result, it is not difficult to guess that I never started anything until the very moment I went to Inna's private lessons. Professionalism, a truly individual approach, (and a wonderful person, too!) literally made a miracle! My attitude to sports has changed, I have a desire to train! I've lost weight, tightened up and feel like a different person! THANK YOU SO MUCH INA!",
-    "instaLink": "https://www.instagram.com/olenikapt/"
-  },
-  {
-    "id": 3,
-    "name": "Anna Zausal",
-    "image": "/images/anna.jpg",
-    "comment": "Hello! Trained with Inna Bogdan in November 2013. The main problem was severe tension in the back and neck during exercise. Ina figured out my problem very skillfully and as a result of the training my problem was solved!",
-    "instaLink": "https://www.instagram.com/anna.zausalina/"
-  } 
-]
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Olga Gurgurova",
+      "image": "/images/glucova.jpg",
+      "comment": "Glad to have met IBWorkout! I train directly from my phone with a personal trainer when it suits me. I just put the child to bed and I'm immediately ready to join the training: this is impossible going to a gym",
+      "instaLink": "https://www.instagram.com/olga.gurgurova/"
+    },
+    {
+      "id": 2,
+      "name": "Olga Pirvu",
+      "image": "/images/olea.jpg",
+      "comment": " Good day everyone! I want to write a review. No, rather thanks to Inna Bogdan. I am one of those people who start to lose weight or get in shape 'on Monday.' As a result, it is not difficult to guess that I never started anything until the very moment I went to Inna's private lessons. Professionalism, a truly individual approach, (and a wonderful person, too!) literally made a miracle! My attitude to sports has changed, I have a desire to train! I've lost weight, tightened up and feel like a different person! THANK YOU SO MUCH INA!",
+      "instaLink": "https://www.instagram.com/olenikapt/"
+    },
+    {
+      "id": 3,
+      "name": "Anna Zausal",
+      "image": "/images/anna.jpg",
+      "comment": "Hello! Trained with Inna Bogdan in November 2013. The main problem was severe tension in the back and neck during exercise. Ina figured out my problem very skillfully and as a result of the training my problem was solved!",
+      "instaLink": "https://www.instagram.com/anna.zausalina/"
+    }
+  ]
 }
-
- 

@@ -1,7 +1,9 @@
-
+import Link from 'next/link';
+import { i } from 'motion/react-client';
 import {
   Logo, Instagram, Vk, FaceBk,
 } from '../Svgs';
+
 
 const Footer = () => (
   <footer className="footer">
