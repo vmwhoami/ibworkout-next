@@ -41,9 +41,9 @@ const Testimonials = ({ testimonials }) => {
           </div>
           <div className="client__name">
             <h5>{name}</h5>
-            <a className="nav__roundbtn client__svg" target="_blank" rel="noopener noreferrer" href={instaLink}>
+            <Link className="nav__roundbtn client__svg" target="_blank" rel="noopener noreferrer" href={instaLink}>
               <Instagram styling="nav__svg" />
-            </a>
+            </Link>
           </div>
           <p>{comment}</p>
 

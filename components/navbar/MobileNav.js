@@ -20,8 +20,7 @@ const MobileNav = () => {
         ref={checkBoxChecker}
         name="nav"
         id="nav"
-        className="navigation-checkbox"
-      />
+        className="navigation-checkbox"/>
 
       <label htmlFor="nav" className="navigation-handle">
         <span className="navigation-icon">&nbsp;</span>
@@ -30,18 +29,18 @@ const MobileNav = () => {
       <div className="navigation-nav">
         <ul className="navigation-list">
           <li className="navigation-item">
-            <Link href="#trainer" >
-              <a className="navigation-link" onClick={unsetCheckbox}> Trainer </a>
+            <Link href="#trainer" className="navigation-link" onClick={unsetCheckbox}>
+              Trainer  
             </Link>
           </li>
           <li className="navigation-item">
-            <Link href="#testimonials" >
-              <a className="navigation-link" onClick={unsetCheckbox} > Testimonials</a>
+            <Link href="#testimonials" className="navigation-link" onClick={unsetCheckbox} >
+              Testimonials 
             </Link>
           </li>
           <li className="navigation-item">
-            <Link href="#form" >
-              <a className="navigation-link" onClick={unsetCheckbox} > Join a training</a>
+            <Link href="#form" className="navigation-link" onClick={unsetCheckbox} >
+              Join a training 
             </Link>
           </li>
         </ul>

@@ -11,15 +11,15 @@ const Footer = () => (
         </button>
       </div>
       <div className="footer__socialbtns">
-        <a className="footer__roundbtn" target="blank" href="https://www.instagram.com/innabogdan/">
+        <Link className="footer__roundbtn" target="blank" href="https://www.instagram.com/innabogdan/">
           <Instagram styling="footer__svg" />
-        </a>
-        <a className="footer__roundbtn" target="blank" href="http://">
+        </Link>
+        <Link className="footer__roundbtn" target="blank" href="http://">
           <Vk styling="footer__svg" />
-        </a>
-        <a className="footer__roundbtn" target="blank" href="https://www.facebook.com/profile.php?id=100026188263111">
+        </Link>
+        <Link className="footer__roundbtn" target="blank" href="https://www.facebook.com/profile.php?id=100026188263111">
           <FaceBk styling="footer__svg" />
-        </a>
+        </Link>
       </div>
     </div>
   </footer>

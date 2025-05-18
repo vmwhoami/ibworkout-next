@@ -17,18 +17,18 @@ const Messenging = () => (
         <MessageSvg styling="messanging__mesaj" />
       </span>
     </label>
-    <a href="http://m.me/vmwhoami" target="blank" className="messanging__messenger shaper">
+    <Link href="http://m.me/vmwhoami" target="blank" className="messanging__messenger shaper">
       <MessengerSvg styling="messanging__svg" />
-    </a>
-    <a href="tel:+37369136177" target="blank" className="messanging__phone shaper">
+    </Link>
+    <Link href="tel:+37369136177" target="blank" className="messanging__phone shaper">
       <PhoneSvg styling="messanging__svg" />
-    </a>
-    <a href="http://wa.me/+37369136177" target="blank" className="messanging__whatsapp shaper">
+    </Link>
+    <Link href="http://wa.me/+37369136177" target="blank" className="messanging__whatsapp shaper">
       <WhatAppSvg styling="messanging__svg fillgreen" />
-    </a>
-    <a href="viber://chat?number=+37369136177" target="blank" className="messanging__viber shaper">
+    </Link>
+    <Link href="viber://chat?number=+37369136177" target="blank" className="messanging__viber shaper">
       <ViberSvg styling="messanging__svg" />
-    </a>
+    </Link>
   </motion.div>
 );
 
