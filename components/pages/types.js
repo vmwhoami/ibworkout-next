@@ -1,6 +1,9 @@
+'use client';
+
 import PropTypes from "prop-types";
 import { useInView } from "react-hook-inview";
-import { motion } from "framer-motion";
+import { motion } from "motion/react"
+
 const Types = () => {
   const [ref, inView] = useInView();
   const variants = {

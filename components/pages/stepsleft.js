@@ -2,7 +2,7 @@
 
 import { Barbel, Question, Present } from '../Svgs';
 import { useInView } from 'react-hook-inview'
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 const StepsLeft = () => {
   const [ref, inView] = useInView()
   const visible = { x: 0, opacity: 1 }

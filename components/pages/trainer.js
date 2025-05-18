@@ -1,7 +1,7 @@
 
 'use client';
 import { useInView } from 'react-hook-inview'
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 
 const Trainer = () => {

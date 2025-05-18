@@ -1,6 +1,7 @@
 'use client';
+
 import { useInView } from 'react-hook-inview'
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import Iframe from 'react-iframe';
 
 const visible = { x: 0, y: 0, opacity: 1 }

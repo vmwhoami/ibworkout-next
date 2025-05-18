@@ -1,8 +1,9 @@
 'use client';
+
 import StepsLeft from './stepsleft';
 import StepsRight from './StepsRight';
 import { useInView } from 'react-hook-inview'
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 
 const Steps = () => {
@@ -23,7 +24,6 @@ const Steps = () => {
         <img className="steps__img"
           src="/images/iphone12black.png "
           alt="iphone12"
-
 
         />
       </motion.div>

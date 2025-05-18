@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from "motion/react"
 import Form from './form';
 import { useSelector } from 'react-redux';
 
