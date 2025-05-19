@@ -1,19 +1,24 @@
-'use client'
+"use client";
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'next/link'
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "next/link";
 
-const ProbeBtn = (props) => {
-  const { styling } = props;
+const ProbeBtn = ({ styling, text }) => {
   return (
     <Link href="#form" className={styling}>
-      Sign up for a trial workout 
+      {text}
     </Link>
   );
 };
-export default ProbeBtn;
 
 ProbeBtn.propTypes = {
   styling: PropTypes.string.isRequired,
+  text: PropTypes.string,
 };
+
+ProbeBtn.defaultProps = {
+  text: "Запишитесь на бесплатную пробную тренировку!",
+};
+
+export default ProbeBtn;

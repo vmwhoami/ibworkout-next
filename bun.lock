@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "next_template_with_redux",
+      "name": "ibworkout",
       "dependencies": {
         "@next/eslint-plugin-next": "^15.3.2",
         "@redux-devtools/extension": "^3.3.0",
