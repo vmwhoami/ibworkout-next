@@ -21,7 +21,7 @@ $ cd ibworkout-next
 First, run the development server:
 
 ```bash
-npm run dev
+bun dev
 # or
 yarn dev
 ```
@@ -42,7 +42,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/vmwhoami/catalogue-of-statisctics/issues).
 
 ## Show your support
 

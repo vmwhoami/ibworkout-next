@@ -1,48 +1,65 @@
-import React from 'react';
-import PhoneInput from 'react-phone-input-2';
-import useForm from './useForm';
-import validations from './validations';
-import 'react-phone-input-2/lib/style.css';
+"use client";
+
+import React, { useState, useEffect } from "react";
+import PhoneInput from "react-phone-input-2";
+import useForm from "./useForm";
+import validations from "./validations";
+import "react-phone-input-2/lib/style.css";
 
 const Form = () => {
-  const {
-    handleChange, handleSubmit, values, errors,
-  } = useForm(validations);
+  const { handleChange, handleSubmit, values, errors } = useForm(validations);
 
+  // Stable list of select options
   const options = [
-    "Choose the purpose of your training",
-    'Keep the whole body in good shape',
-    'Pumping the muscles of the press, legs and buttocks',
-    'Increased strength / mass gain',
-    'Weight loss',
-    'Healthy back',
-    'Yoga / Pilates for health',
-    'Improve flexibility and strength',
+    { label: "Choose the purpose of your training", value: "" },
+    { label: "Keep the whole body in good shape", value: "full_body" },
+    {
+      label: "Pumping the muscles of the press, legs and buttocks",
+      value: "press_legs_buttocks",
+    },
+    { label: "Increased strength / mass gain", value: "mass_gain" },
+    { label: "Weight loss", value: "weight_loss" },
+    { label: "Healthy back", value: "healthy_back" },
+    { label: "Yoga / Pilates for health", value: "yoga_pilates" },
+    {
+      label: "Improve flexibility and strength",
+      value: "flexibility_strength",
+    },
   ];
 
-  const genKey = () => Math.random().toString(36).slice(2, 10);
+  // Custom handler to adapt PhoneInput onChange to our form
+  const handlePhoneChange = (phone) => {
+    handleChange({ target: { name: "phone", value: phone } });
+  };
 
   return (
-    <div className="form" >
+    <div className="form">
       <h3 className="hcenter text-white">Book a session with our coach</h3>
-      <form name="contact" className="form__form" onSubmit={handleSubmit}>
+      <form
+        name="contact"
+        className="form__form"
+        onSubmit={handleSubmit}
+        noValidate
+      >
         <input
           type="text"
           placeholder="Name and surname"
           name="name"
-          value={values.name}
+          value={values.name || ""}
           onChange={handleChange}
         />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <p className="error">{errors.name}</p>}
+
         <input
           type="email"
           name="email"
           id="email"
-          value={values.email}
-          onChange={handleChange}
           placeholder="E-mail"
+          value={values.email || ""}
+          onChange={handleChange}
         />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className="error">{errors.email}</p>}
+
         <PhoneInput
           country="md"
           containerClass="phone"
@@ -51,38 +68,48 @@ const Form = () => {
           name="phone"
           id="phone"
           placeholder="Enter phone number"
-          value={values.phone}
-          onChange={handleChange}
+          value={values.phone || ""}
+          onChange={handlePhoneChange}
         />
-        {errors.phone && <p>{errors.phone}</p>}
+        {errors.phone && <p className="error">{errors.phone}</p>}
 
         <div className="select">
-          <select className="select__select" name="select" id="select" value={values.select} onChange={handleChange}>
-            {options.map((option) => (
-              <option key={genKey()} value={option}>
-                {option}
+          <select
+            className="select__select"
+            name="select"
+            id="select"
+            value={values.select || ""}
+            onChange={handleChange}
+          >
+            {options.map(({ label, value }) => (
+              <option
+                key={value || "placeholder"}
+                value={value}
+                disabled={value === ""}
+              >
+                {label}
               </option>
             ))}
           </select>
         </div>
+        {errors.select && <p className="error">{errors.select}</p>}
 
         <div className="textarea">
           <textarea
             name="comment"
             id="comment"
-            value={values.comment}
-            onChange={handleChange}
-            className="textarea__text"
-            placeholder="Please enter your city or time zone. How can I contact you (phone, whatsapp, etc.) and what time? "
-            rows="4"
+            placeholder="Please enter your city or time zone. How can I contact you (phone, whatsapp, etc.) and what time?"
+            rows={4}
             spellCheck="false"
+            className="textarea__text"
+            value={values.comment || ""}
+            onChange={handleChange}
           />
         </div>
+        {errors.comment && <p className="error">{errors.comment}</p>}
+
         <div className="btncontainer">
-          <button
-            type="submit"
-            className="formbtn"
-          >
+          <button type="submit" className="formbtn">
             Send
           </button>
         </div>

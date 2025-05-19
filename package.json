@@ -2,6 +2,7 @@
   "name": "next_template_with_redux",
   "version": "0.1.0",
   "private": true,
+  "node_version":"v22.13.1",
   "scripts": {
     "dev": "bun run --bun next dev",
     "build": "bun run --bun next build",
