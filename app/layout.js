@@ -1,7 +1,6 @@
-
- 
 // app/layout.js
 import '../styles/style.scss';
+import './globals.css'
 import { Providers } from './providers';
 
 export const metadata = {

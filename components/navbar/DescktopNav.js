@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import SocialBtns from "../SocialBtns";
 import Link from "next/link";
@@ -16,11 +16,9 @@ const DescktopNav = () => {
   return (
     <div className="nav__container">
       <div className="nav__logo">
-        <button
-          type="button"
-          className="logo__atag"
-          onClick={() => scrollTop()}
-        >
+        <button type="button"
+                className="logo__atag"
+                onClick={() => scrollTop()}>
           <Logo styling="logo__svg" />
         </button>
       </div>
