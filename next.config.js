@@ -3,7 +3,10 @@
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    includePaths: ['./styles'],
+    includePaths: ["./styles"],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 

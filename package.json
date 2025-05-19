@@ -2,13 +2,14 @@
   "name": "next_template_with_redux",
   "version": "0.1.0",
   "private": true,
-  "node_version":"v22.13.1",
+  "node_version": "v22.13.1",
   "scripts": {
     "dev": "bun run --bun next dev",
     "build": "bun run --bun next build",
     "start": "bun run --bun next start"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^15.3.2",
     "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^2.8.2",
     "axios": "1.9.0",
