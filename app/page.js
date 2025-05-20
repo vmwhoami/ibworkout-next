@@ -1,4 +1,5 @@
 // app/page.js
+import './globals.css' 
 import reviewsData from "../data/reviews.json";
 import { Suspense } from "react";
 import Heading from "../components/pages/head";
