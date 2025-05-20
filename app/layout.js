@@ -1,6 +1,6 @@
 // app/layout.js
-import '../styles/style.scss';
-import './globals.css'
+import './globals.css'         // ① Tailwind
+import './styles/style.scss'
 import { Providers } from './providers';
 
 export const metadata = {
