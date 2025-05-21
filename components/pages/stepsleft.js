@@ -3,6 +3,7 @@
 import { Barbel, Question, Present } from '../Svgs';
 import { useInView } from 'react-hook-inview'
 import { motion } from "motion/react"
+
 const StepsLeft = () => {
   const [ref, inView] = useInView()
   const visible = { x: 0, opacity: 1 }
@@ -17,14 +18,15 @@ const StepsLeft = () => {
       <motion.div
         animate={inView ? visible : nonvisible}
         transition={trans}
-        className="steps__wrapper reverse">
+        className="steps__wrapper reverse"
+      >
         <div className="steps__textwrap">
-          <h4>Choose the type of training</h4>
+          <h4>Выберите тип тренировки</h4>
           <p>
-             Each of them solves different tasks:
-             helps reduce weight, keeps the body in shape,
-             strengthens the muscular corset or works with stretching.
-        </p>
+            У нас нет шаблонов — только персональный подход.  
+            Хотите похудеть, подтянуть тело, укрепить мышцы или поработать над гибкостью?  
+            Мы подберём формат под вашу цель и уровень подготовки.
+          </p>
         </div>
         <div className="steps__svgwrap">
           <Barbel />
@@ -34,14 +36,15 @@ const StepsLeft = () => {
       <motion.div
         animate={inView ? visible : nonvisible}
         transition={trans}
-
-        className="steps__wrapper reverse">
+        className="steps__wrapper reverse"
+      >
         <div className="steps__textwrap">
-          <h4>Leave a request</h4>
+          <h4>Оставьте заявку</h4>
           <p>
-          Fill out a short form and we will choose
-             your optimal program.
-        </p>
+            Заполните короткую анкету, и мы подберём для вас  
+            оптимальную программу тренировок.  
+            Никаких лишних слов — только то, что действительно работает.
+          </p>
         </div>
         <div className="steps__svgwrap">
           <Question />
@@ -51,22 +54,21 @@ const StepsLeft = () => {
       <motion.div
         animate={inView ? visible : nonvisible}
         transition={trans}
-
-
-        className="steps__wrapper reverse">
+        className="steps__wrapper reverse"
+      >
         <div className="steps__textwrap">
-          <h4>To join a free trial workout</h4>
+          <h4>Присоединитесь к бесплатной пробной тренировке</h4>
           <p>
-             Get started with your chosen trainer for free:
-             you will be able to understand whether the program and the format of the classes are right for you.
-        </p>
+            Попробуйте бесплатно: познакомьтесь с тренером,  
+            почувствуйте подход и оцените результат.  
+            Уже после первой сессии вы поймёте —  
+            **мы — это то, что вы искали**.
+          </p>
         </div>
-
         <div className="steps__svgwrap">
           <Present />
         </div>
       </motion.div>
-
     </div>
   )
 };

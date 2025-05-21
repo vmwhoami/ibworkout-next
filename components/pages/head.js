@@ -1,85 +1,71 @@
 "use client";
 
-import Image from 'next/image';
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-// import mainJpg from '../public/gym-bg.jpg';
-import ProbeBtn from '../probeBtn';
+import Image from "next/image";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import ProbeBtn from "../probeBtn";
 
-export default function Home() {
+export default function HomeHero() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 
   const transition = { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] };
-  const ease = [0.43, 0.13, 0.23, 0.96];
-  const visible = { opacity: 1, y: 0 };
-  const nonvisible = { opacity: 0, y: 50 };
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
-    <section className="flex w-90">
-      {/* Background image */}
-      <div className="absolute inset-0 overflow-hidden">
-        <Image src="/images/mainbg.jpg" 
-               alt="Hero Background"
-               fill
-               className="object-cover"
-               quality={80}
-               unoptimized/>
-        <div className="absolute inset-0 bg-black opacity-75" />
+    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
+      {/* Background Image and Overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/mainbg.jpg"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          quality={80}
+          unoptimized />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/80 to-transparent" />
       </div>
 
-      {/* Animated Head Content */}
-      <div ref={ref} className="z-10 max-w-2xl mx-auto px-6 py-12">
-        <motion.div
-          className="flex flex-col items-center"
-          initial={nonvisible}
-          animate={inView ? visible : nonvisible}
+      {/* Content */}
+      <div
+        ref={ref}
+        className="flex z-10 max-w-xl px-6 space-y-6" >
+        <motion.h1
+          className="text-white text-2xl sm:text-3xl md:text-3xl  leading-tight"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={variants}
           transition={transition}
         >
-          <motion.h1 className="text-white text-2xl md:text-6xl font-bold leading-tight mb-6">
-            Хотите кардинальных перемен? Тренируйтесь онлайн с персональным тренером!
-          </motion.h1>
-          <motion.div
-            initial={{ odivacity: 0 }}
-            animate={inView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-white"
-          >
-            В прямом эфире.
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className="text-white"
-          >
-            Когда удобно вам.
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
-            className="text-white"
-          >
-            Где вам удобно.
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-            transition={{ delay: 2, ease, duration: 0.5 }}>
-            <ProbeBtn styling="px-6 py-3" text="Начать тренировку" />
-          </motion.div>
-        </motion.div>
-      </div>
+          Хотите кардинальных перемен?
+          <br />
+          Тренируйтесь онлайн с персональным тренером!
+        </motion.h1>
 
-      {/* Play Button and Slider Controls */}
-      <div className="absolute bottom-10 left-6 flex items-center space-x-8 z-10">
-        <button className="relative w-16 h-16 rounded-full bg-gray-800 bg-opacity-50 flex items-center justify-center hover:bg-opacity-75 transition">
-          <span className="sr-only">Play Video</span>
-          <div className="w-0 h-0 border-l-6 border-l-white border-t-4 border-b-4 border-t-transparent border-b-transparent ml-1" />
-        </button>
-       
-    
+        <motion.p
+          className="text-gray-200 text-lg sm:text-xl"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
+          В прямом эфире, где и когда вам удобно. Начните свой путь к здоровью уже сегодня.
+        </motion.p>
+
+        <motion.div
+          className="flex justify-center gap-4"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          <ProbeBtn className="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-full text-white font-semibold">
+            Начать тренировку
+          </ProbeBtn>
+
+          
+        </motion.div>
       </div>
     </section>
   );
