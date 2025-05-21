@@ -13,7 +13,7 @@ const Types = () => {
   };
   return (
     <div ref={ref} className="types">
-      <h3 className="hcenter">Types of training</h3>
+      <h3 className="hcenter">Виды тренировок</h3>
       <motion.div
         animate={inView ? "open" : "closed"}
         variants={variants}
@@ -24,46 +24,47 @@ const Types = () => {
           variants={variants}
           className="types__training"
         >
-          <Img adress="/images/functional.jpg" alt="functional" />
+          <Img adress="/images/functional.jpg" alt="Функциональные тренировки" />
           <motion.div className="types__desc">
-            <h4>Functional training</h4>
+            <h4>Функциональные тренировки</h4>
             <p>
-              Develops stamina and improves overall body tone - there will be
-              more strength and motivation for other tasks.
+              Развивают выносливость и улучшают общее состояние тела —  
+              вы почувствуете больше сил и мотивации в повседневной жизни.
             </p>
           </motion.div>
         </motion.div>
 
         <motion.div className="types__training">
-          <Img adress="/images/silovie.jpg" alt="silovie" />
+          <Img adress="/images/silovie.jpg" alt="Силовые тренировки" />
           <div className="types__desc">
-            <h4>Strength training</h4>
+            <h4>Силовые тренировки</h4>
             <p>
-              Develop muscles through training with own weight or weights -
-              exercises help create beautiful relief and get in shape.
+              Развивайте мышцы с помощью упражнений с собственным весом  
+              или отягощениями — идеальный способ создать красивый рельеф  
+              и привести себя в форму.
             </p>
           </div>
         </motion.div>
 
         <div className="types__training">
-          <Img adress="/images/yoga.jpg" alt="yoga" />
+          <Img adress="/images/yoga.jpg" alt="Пилатес и йога" />
           <div className="types__desc">
-            <h4>Pilates and yoga</h4>
+            <h4>Пилатес и йога</h4>
             <p>
-              Increases muscle strength and tone, particularly of your abdominal
-              muscles, lower back, hips and buttocks (the 'core muscles' of your
-              body). Balanced muscular strength on both sides of your body
+              Укрепляют мышцы кора (пресс, спина, бёдра и ягодицы),  
+              улучшают осанку и баланс, развивают гибкость и внимание  
+              к телу с обеих сторон.
             </p>
           </div>
         </div>
 
         <div className="types__training">
-          <Img adress="/images/weightloss.jpg" alt="weightloss" />
+          <Img adress="/images/weightloss.jpg" alt="Похудение" />
           <div className="types__desc">
-            <h4>Weight loss</h4>
+            <h4>Похудение</h4>
             <p>
-              Combines intense strength and functional training - will help you
-              lose weight and get in shape.
+              Интенсивные силовые и функциональные тренировки помогут  
+              эффективно сбросить вес и обрести желаемую форму.
             </p>
           </div>
         </div>
