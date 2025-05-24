@@ -26,7 +26,9 @@ const Types = () => {
         >
           <Img adress="/images/functional.jpg" alt="Функциональные тренировки" />
           <motion.div className="types__desc">
-            <h4>Функциональные тренировки</h4>
+            <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Функциональные тренировки</h4>
             <p>
               Развивают выносливость и улучшают общее состояние тела —  
               вы почувствуете больше сил и мотивации в повседневной жизни.
@@ -37,7 +39,9 @@ const Types = () => {
         <motion.div className="types__training">
           <Img adress="/images/silovie.jpg" alt="Силовые тренировки" />
           <div className="types__desc">
-            <h4>Силовые тренировки</h4>
+            <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Силовые тренировки</h4>
             <p>
               Развивайте мышцы с помощью упражнений с собственным весом  
               или отягощениями — идеальный способ создать красивый рельеф  
@@ -49,7 +53,9 @@ const Types = () => {
         <div className="types__training">
           <Img adress="/images/yoga.jpg" alt="Пилатес и йога" />
           <div className="types__desc">
-            <h4>Пилатес и йога</h4>
+            <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Пилатес и йога</h4>
             <p>
               Укрепляют мышцы кора (пресс, спина, бёдра и ягодицы),  
               улучшают осанку и баланс, развивают гибкость и внимание  
@@ -61,7 +67,9 @@ const Types = () => {
         <div className="types__training">
           <Img adress="/images/weightloss.jpg" alt="Похудение" />
           <div className="types__desc">
-            <h4>Похудение</h4>
+            <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Похудение</h4>
             <p>
               Интенсивные силовые и функциональные тренировки помогут  
               эффективно сбросить вес и обрести желаемую форму.
