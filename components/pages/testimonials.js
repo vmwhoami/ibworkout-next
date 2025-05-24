@@ -31,43 +31,52 @@ const Testimonials = ({ testimonials }) => {
   };
 
   return (
-    <div className="testimonials" id="testimonials">
-      <h3 className="hcenter">Testimonials</h3>
-      <div className="testimonials__container">
-        <div className="client__comment">
-          <div className="client__img">
-            <img src={image} alt="client" loading="lazy" />
+    <div className="w-full py-16 px-4 md:px-8 bg-gray-50" id="testimonials">
+      <h3 className="text-3xl font-bold text-center mb-12">Отзывы</h3>
+      <div className="max-w-6xl mx-auto">
+        <div className="relative bg-white rounded-xl shadow-lg p-8 md:p-12">
+          <div className="flex justify-center mb-8">
+            <div className="w-32 h-32 rounded-full overflow-hidden shadow-md">
+              <img
+                src={image}
+                alt="клиент"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
-          <div className="client__name">
-            <h5>{name}</h5>
+
+          <div className="flex justify-between items-center mb-6">
+            <h5 className="text-xl font-semibold text-gray-800">{name}</h5>
             <Link
-              className="nav__roundbtn client__svg"
+              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"
               href={instaLink}
             >
-              <Instagram styling="nav__svg" />
+              <Instagram className="w-6 h-6 text-gray-700" />
             </Link>
           </div>
-          <p>{comment}</p>
+
+          <p className="text-gray-600 text-center italic mb-8">"{comment}"</p>
 
           <button
-            aria-label="previous-btn"
+            aria-label="предыдущий"
             type="button"
-            className="switchbtn left"
+            className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full shadow-md p-3 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onKeyDown={(e) => handleKeyNavigation(e, prevAction)}
             onClick={prevAction}
           >
-            <PrevIcon styling="switch-icon" />
+            <PrevIcon className="w-6 h-6 text-gray-700" />
           </button>
           <button
-            aria-label="next-btn"
+            aria-label="следующий"
             type="button"
-            className="switchbtn right"
+            className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-white rounded-full shadow-md p-3 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onKeyDown={(e) => handleKeyNavigation(e, nextAction)}
             onClick={nextAction}
           >
-            <NextIcon styling="switch-icon" />
+            <NextIcon className="w-6 h-6 text-gray-700" />
           </button>
         </div>
       </div>

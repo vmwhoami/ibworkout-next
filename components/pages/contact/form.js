@@ -9,108 +9,121 @@ import "react-phone-input-2/lib/style.css";
 const Form = () => {
   const { handleChange, handleSubmit, values, errors } = useForm(validations);
 
-  // Stable list of select options
   const options = [
-    { label: "Choose the purpose of your training", value: "" },
-    { label: "Keep the whole body in good shape", value: "full_body" },
+    { label: "Выберите цель тренировок", value: "" },
+    { label: "Поддержание формы всего тела", value: "full_body" },
     {
-      label: "Pumping the muscles of the press, legs and buttocks",
+      label: "Прокачка мышц пресса, ног и ягодиц",
       value: "press_legs_buttocks",
     },
-    { label: "Increased strength / mass gain", value: "mass_gain" },
-    { label: "Weight loss", value: "weight_loss" },
-    { label: "Healthy back", value: "healthy_back" },
-    { label: "Yoga / Pilates for health", value: "yoga_pilates" },
+    { label: "Увеличение силы/набор массы", value: "mass_gain" },
+    { label: "Похудение", value: "weight_loss" },
+    { label: "Здоровая спина", value: "healthy_back" },
+    { label: "Йога/Пилатес для здоровья", value: "yoga_pilates" },
     {
-      label: "Improve flexibility and strength",
+      label: "Улучшение гибкости и силы",
       value: "flexibility_strength",
     },
   ];
 
-  // Custom handler to adapt PhoneInput onChange to our form
   const handlePhoneChange = (phone) => {
     handleChange({ target: { name: "phone", value: phone } });
   };
 
   return (
-    <div className="form">
-      <h3 className="hcenter text-white">Book a session with our coach</h3>
+    <div className="form"> {/* Сохраняем существующий класс для фона */}
+      <h3 className="text-2xl md:text-3xl font-bold text-center text-white mb-8">
+        Записаться на тренировку с тренером
+      </h3>
       <form
         name="contact"
-        className="form__form"
+        className="max-w-2xl mx-auto flex flex-col gap-6"
         onSubmit={handleSubmit}
         noValidate
       >
-        <input
-          type="text"
-          placeholder="Name and surname"
-          name="name"
-          value={values.name || ""}
-          onChange={handleChange}
-        />
-        {errors.name && <p className="error">{errors.name}</p>}
+        {/* Поле имени */}
+        <div>
+          <input
+            type="text"
+            placeholder="Имя и фамилия"
+            name="name"
+            value={values.name || ""}
+            onChange={handleChange}
+            className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.name && <p className="mt-2 text-red-500 text-sm">{errors.name}</p>}
+        </div>
 
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="E-mail"
-          value={values.email || ""}
-          onChange={handleChange}
-        />
-        {errors.email && <p className="error">{errors.email}</p>}
+        {/* Поле email */}
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Электронная почта"
+            value={values.email || ""}
+            onChange={handleChange}
+            className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.email && <p className="mt-2 text-red-500 text-sm">{errors.email}</p>}
+        </div>
 
-        <PhoneInput
-          country="md"
-          containerClass="phone"
-          inputClass="phone_input"
-          inputStyle={{ paddingTop: 25, paddingBottom: 25 }}
-          name="phone"
-          id="phone"
-          placeholder="Enter phone number"
-          value={values.phone || ""}
-          onChange={handlePhoneChange}
-        />
-        {errors.phone && <p className="error">{errors.phone}</p>}
+        {/* Телефон */}
+        <div className="relative w-full">
+          <PhoneInput
+            country="md"
+            containerClass="w-full"
+            inputClass="w-full !py-6 !rounded-lg !border-gray-300 focus:!outline-none focus:!ring-2 focus:!ring-blue-500"
+            name="phone"
+            placeholder="Введите номер телефона"
+            value={values.phone || ""}
+            onChange={handlePhoneChange}
+          />
+          {errors.phone && <p className="mt-2 text-red-500 text-sm">{errors.phone}</p>}
+        </div>
 
-        <div className="select">
+        {/* Выпадающий список */}
+        <div className="relative w-full">
           <select
-            className="select__select"
             name="select"
-            id="select"
             value={values.select || ""}
             onChange={handleChange}
+            className="w-full p-4 rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           >
             {options.map(({ label, value }) => (
               <option
                 key={value || "placeholder"}
                 value={value}
                 disabled={value === ""}
+                className="text-gray-700"
               >
                 {label}
               </option>
             ))}
           </select>
+          {errors.select && <p className="mt-2 text-red-500 text-sm">{errors.select}</p>}
         </div>
-        {errors.select && <p className="error">{errors.select}</p>}
 
-        <div className="textarea">
+        {/* Текстовое поле */}
+        <div>
           <textarea
             name="comment"
-            id="comment"
-            placeholder="Please enter your city or time zone. How can I contact you (phone, whatsapp, etc.) and what time?"
+            placeholder="Укажите ваш город или часовой пояс. Как с вами связаться (телефон, WhatsApp и т.д.) и в какое время?"
             rows={4}
             spellCheck="false"
-            className="textarea__text"
             value={values.comment || ""}
             onChange={handleChange}
+            className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
           />
+          {errors.comment && <p className="mt-2 text-red-500 text-sm">{errors.comment}</p>}
         </div>
-        {errors.comment && <p className="error">{errors.comment}</p>}
 
-        <div className="btncontainer">
-          <button type="submit" className="formbtn">
-            Send
+        {/* Кнопка отправки */}
+        <div className="flex justify-center mt-4">
+          <button
+            type="submit"
+            className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+          >
+            Отправить
           </button>
         </div>
       </form>
