@@ -16,9 +16,9 @@ export default function HomeHero() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <section className="h-screen flex items-center justify-center text-center overflow-hidden">
       {/* Background Image and Overlay */}
-      <div className="absolute inset-0">
+      <div className="inset-0">
         <Image
           src="/images/mainbg.jpg"
           alt="Hero Background"
@@ -26,7 +26,7 @@ export default function HomeHero() {
           className="object-cover"
           quality={80}
           unoptimized />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/80 to-transparent" />
+        <div className="inset-0 bg-gradient-to-br from-black/60 via-black/80 to-transparent" />
       </div>
 
       {/* Content */}
