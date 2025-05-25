@@ -49,7 +49,7 @@ const Testimonials = ({ testimonials }) => {
           <div className="flex justify-between items-center mb-6">
             <h5 className="text-xl font-semibold text-gray-800">{name}</h5>
             <Link
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+              className="nav__roundbtn client__svg p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"
               href={instaLink}

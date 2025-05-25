@@ -36,7 +36,7 @@ const AboutTrainer = () => {
             href="https://www.instagram.com/innabogdan/"
             animate={inView ? visible : hidden}
             transition={transition}
-            className="z-10 block w-64 h-96 overflow-hidden rounded-2xl shadow-2xl"
+            className="z-10 block w-100 h-130 overflow-hidden rounded-2xl shadow-2xl"
           >
             <img
               src="/images/Inngirea.jpg"
