@@ -21,28 +21,32 @@ const How = () => {
   const [ref, inView] = useInView();
 
   return (
-    <figure className="md:flex bg-gray-100 rounded-xl p-8 md:p-0">
-      <motion.h2
-        animate={inView ? visible : hidden}
-        transition={textTransition}
-        className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
-      >
-        Пора прокачать тело и дух на свежем воздухе
-      </motion.h2>
+    <figure className="h-screen md:flex bg-gray-100 rounded-xl p-8 md:p-0">
       <motion.div
         animate={inView ? visible : hidden}
         transition={textTransition}
         className="text-lg md:text-xl text-gray-700"
       >
-        Забудьте душные залы. Тренируйтесь под открытым небом с профессионалом,
-        который вдохновляет. Наши онлайн-сессии с видео сопровождением подарят
-        вам энергию, гибкость и силу — где бы вы ни были.
- 
-        <span className="font-semibold text-red-500">
+        <motion.h2
+          animate={inView ? visible : hidden}
+          transition={textTransition}
+          className="p-20 text-2xl md:text-5xl font-bold text-gray-900 leading-tight"
+        >
+          Пора прокачать тело и дух на свежем воздухе
+        </motion.h2>
+        <p className="p-20 text-2xl">
+          {" "}
+          Забудьте душные залы. Тренируйтесь под открытым небом с
+          профессионалом, который вдохновляет. Наши онлайн-сессии с видео
+          сопровождением подарят вам энергию, гибкость и силу — где бы вы ни
+          были.
+        </p>
+
+        <span className="p-20 text-2xl font-semibold text-red-500">
           Первая тренировка — со скидкой!
         </span>
       </motion.div>
-      <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <div className="w-full h-full pt-6 md:p-8 text-center md:text-left space-y-4">
         <motion.div
           animate={inView ? visible : hidden}
           transition={videoTransition}

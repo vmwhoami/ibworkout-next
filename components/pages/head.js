@@ -7,46 +7,54 @@ import ProbeBtn from "../probeBtn";
 
 export default function HomeHero() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
+  const inView = useInView(ref, { once: true, margin: '0px 0px -100px 0px' });
 
-  const transition = { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] };
+  const fadeIn = { duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] };
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
 
   return (
-    <section className="h-screen flex items-center justify-center text-center overflow-hidden">
-      {/* Background Image and Overlay */}
-      <div className="inset-0">
+    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0">
         <Image
           src="/images/mainbg.jpg"
           alt="Hero Background"
           fill
           className="object-cover"
           quality={80}
-          unoptimized />
-        <div className="inset-0 bg-gradient-to-br from-black/60 via-black/80 to-transparent" />
+          priority
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent" />
       </div>
 
       {/* Content */}
-      <div
+      <motion.div
         ref={ref}
-        className="flex z-10 max-w-xl px-6 space-y-6" >
-        <motion.h1
-          className="text-white text-2xl sm:text-3xl md:text-3xl  leading-tight"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={variants}
-          transition={transition}
-        >
+        className="relative z-10 max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}
+        transition={fadeIn}
+      >
+        <motion.h1 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl leading-tight" >
           Хотите кардинальных перемен?
-          <br />
-          Тренируйтесь онлайн с персональным тренером!
         </motion.h1>
 
+        <motion.h2
+          className="text-red-500 font-semibold text-xl sm:text-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          Тренируйтесь онлайн с персональным тренером!
+        </motion.h2>
+
         <motion.p
-          className="text-gray-200 text-lg sm:text-xl"
+          className="text-gray-200 text-base sm:text-lg max-w-prose"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
@@ -55,18 +63,19 @@ export default function HomeHero() {
         </motion.p>
 
         <motion.div
-          className="flex justify-center gap-4"
+          className="flex flex-col sm:flex-row gap-4"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <ProbeBtn className="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-full text-white font-semibold">
+          <ProbeBtn className="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-full text-white font-semibold text-base sm:text-lg">
             Начать тренировку
           </ProbeBtn>
-
-          
+          <ProbeBtn className="px-8 py-3 border border-red-600 hover:bg-red-600 hover:text-white rounded-full text-red-600 font-semibold text-base sm:text-lg bg-transparent">
+            Подробнее
+          </ProbeBtn>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 }

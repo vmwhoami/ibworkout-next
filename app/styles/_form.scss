@@ -40,16 +40,10 @@
       margin: 2rem;
     }
   }
-
-  p {
-    padding: 0 2rem;
-    color: rgb(255, 0, 0);
-  }
 }
 
 .select {
   appearance: none;
-  background-color: transparent;
   border: none;
   padding: 2rem;
   margin: 0;
@@ -74,6 +68,7 @@
   padding: 2rem;
   margin: 0;
   width: 100%;
+   background-color: #fff;
 
   &__text {
     border: none;
