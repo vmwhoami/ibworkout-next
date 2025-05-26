@@ -49,7 +49,7 @@ const Form = () => {
             name="name"
             value={values.name || ""}
             onChange={handleChange}
-            className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-white w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.name && <p className="mt-2 text-red-500 text-sm">{errors.name}</p>}
         </div>
@@ -62,7 +62,7 @@ const Form = () => {
             placeholder="Электронная почта"
             value={values.email || ""}
             onChange={handleChange}
-            className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-white w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.email && <p className="mt-2 text-red-500 text-sm">{errors.email}</p>}
         </div>
@@ -112,7 +112,7 @@ const Form = () => {
             spellCheck="false"
             value={values.comment || ""}
             onChange={handleChange}
-            className="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            className="bg-white w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
           />
           {errors.comment && <p className="mt-2 text-red-500 text-sm">{errors.comment}</p>}
         </div>

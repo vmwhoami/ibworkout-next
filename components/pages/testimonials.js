@@ -34,7 +34,7 @@ const Testimonials = ({ testimonials }) => {
     <div className="w-full py-16 px-4 md:px-8 bg-gray-50" id="testimonials">
       <h3 className="text-3xl font-bold text-center mb-12">Отзывы</h3>
       <div className="max-w-6xl mx-auto">
-        <div className="relative bg-white rounded-xl shadow-lg p-8 md:p-12">
+        <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
           <div className="flex justify-center mb-8">
             <div className="w-32 h-32 rounded-full overflow-hidden shadow-md">
               <img
@@ -63,20 +63,22 @@ const Testimonials = ({ testimonials }) => {
           <button
             aria-label="предыдущий"
             type="button"
-            className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full shadow-md p-3 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-20 h-20 top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full shadow-md p-3 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onKeyDown={(e) => handleKeyNavigation(e, prevAction)}
             onClick={prevAction}
           >
-            <PrevIcon className="w-6 h-6 text-gray-700" />
+          
+            <PrevIcon className="w-20 h-20 text-gray-700" />
           </button>
           <button
             aria-label="следующий"
             type="button"
-            className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-white rounded-full shadow-md p-3 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-20 h-20 top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-white rounded-full shadow-md p-3 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onKeyDown={(e) => handleKeyNavigation(e, nextAction)}
             onClick={nextAction}
           >
-            <NextIcon className="w-6 h-6 text-gray-700" />
+           
+            <NextIcon className="w-20 h-20 text-gray-700" />
           </button>
         </div>
       </div>
