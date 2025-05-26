@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-next-bun-app:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    # (Optional) mount for live-reload during dev:
+    # volumes:
+    #   - ./:/app
