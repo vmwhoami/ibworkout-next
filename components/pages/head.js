@@ -53,14 +53,14 @@ export default function HomeHero() {
           Тренируйтесь онлайн с персональным тренером!
         </motion.h2>
 
-        <motion.p
-          className="text-gray-200 text-base sm:text-lg max-w-prose"
+        <motion.div
+          className="text-4xl text-gray-200 text-base sm:text-lg max-w-prose"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           В прямом эфире, где и когда вам удобно. Начните свой путь к здоровью уже сегодня.
-        </motion.p>
+        </motion.div>
 
         <motion.div
           className="flex flex-col sm:flex-row gap-4"
