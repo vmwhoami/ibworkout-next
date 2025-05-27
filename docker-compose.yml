@@ -1,11 +1,9 @@
-version: '3.8'
 
 services:
   web:
     build:
       context: .
       dockerfile: Dockerfile
-    image: my-next-bun-app:latest
     restart: unless-stopped
     ports:
       - "3000:3000"
