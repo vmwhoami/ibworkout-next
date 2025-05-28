@@ -21,7 +21,7 @@ const How = () => {
   const [ref, inView] = useInView();
 
   return (
-    <figure className="flex h-screen md:flex bg-gray-100 rounded-xl p-8 md:p-0">
+    <figure className="flex h-screen md:flex-col bg-gray-100 rounded-xl p-8 md:p-0">
       <motion.div
         animate={inView ? visible : hidden}
         transition={textTransition}
@@ -46,7 +46,7 @@ const How = () => {
           Первая тренировка — со скидкой!
         </span>
       </motion.div>
-      <div className="flex-col w-full h-full pt-6 md:p-8 text-center md:text-left space-y-4">
+      <div className="flex-col md:flex-row w-full h-full pt-6 md:p-8 text-center md:text-left space-y-4">
         <motion.div
           animate={inView ? visible : hidden}
           transition={videoTransition}

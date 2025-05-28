@@ -24,7 +24,9 @@ const StepsRight = () => {
           <Clock />
         </div>
         <div className="steps__textwrap">
-          <h4>Запишитесь на индивидуальную тренировку</h4>
+          <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Запишитесь на индивидуальную тренировку</h4>
           <p>
             Выбирайте удобное время и занимайтесь регулярно  
             с личным тренером. Это не только комфорт — это дисциплина  
@@ -42,7 +44,9 @@ const StepsRight = () => {
           <Package />
         </div>
         <div className="steps__textwrap">
-          <h4>Выберите пакет тренировок</h4>
+          <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Выберите пакет тренировок</h4>
           <p>
             Сколько занятий вам нужно? На какой срок?  
             Вы сами решаете. Мы подстроимся под ваш ритм  
@@ -60,7 +64,9 @@ const StepsRight = () => {
           <Trophy />
         </div>
         <div className="steps__textwrap">
-          <h4>Достигайте своих целей</h4>
+          <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Достигайте своих целей</h4>
           <p>
             Вместе с наставником вы не просто тренируетесь —  
             вы двигаетесь вперёд, отслеживаете прогресс  

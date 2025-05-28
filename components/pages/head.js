@@ -34,7 +34,7 @@ export default function HomeHero() {
       {/* Content */}
       <motion.div
         ref={ref}
-        className="relative z-10 max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6"
+        className="relative z-5 max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}

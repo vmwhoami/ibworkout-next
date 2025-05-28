@@ -21,7 +21,9 @@ const StepsLeft = () => {
         className="steps__wrapper reverse"
       >
         <div className="steps__textwrap">
-          <h4>Выберите тип тренировки</h4>
+          <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Выберите тип тренировки</h4>
           <p>
             У нас нет шаблонов — только персональный подход.  
             Хотите похудеть, подтянуть тело, укрепить мышцы или поработать над гибкостью?  
@@ -39,7 +41,9 @@ const StepsLeft = () => {
         className="steps__wrapper reverse"
       >
         <div className="steps__textwrap">
-          <h4>Оставьте заявку</h4>
+          <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Оставьте заявку</h4>
           <p>
             Заполните короткую анкету, и мы подберём для вас  
             оптимальную программу тренировок.  
@@ -57,7 +61,9 @@ const StepsLeft = () => {
         className="steps__wrapper reverse"
       >
         <div className="steps__textwrap">
-          <h4>Присоединитесь к бесплатной пробной тренировке</h4>
+          <h4 className="font-bold text-2xl font-sans text-gray-800 mb-4 
+              pb-2 border-b-2 border-blue-400 hover:text-blue-600 
+              transition-colors duration-300 tracking-tight">Присоединитесь к бесплатной пробной тренировке</h4>
           <p>
             Попробуйте бесплатно: познакомьтесь с тренером,  
             почувствуйте подход и оцените результат.  
