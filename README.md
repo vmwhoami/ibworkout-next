@@ -1,48 +1,32 @@
-## About
+## 🏋️ About
 
-A side project for a fitness trainer. Built with Next.js.
-I used Framer Motion for the animations.
+This is a side project built for a fitness trainer. It was originally created with an older version of Next.js and has been modernized:
 
+- Upgraded to **Next.js 15**
+- Migrated from **npm to Bun** as the package manager
+- Styled using **Tailwind CSS**
+- Includes animations powered by **Framer Motion**
+
+## Old Pure scss
 ![screenshot](animation.gif)
 
-### Live Demo
+## New TailWind + SCSS with bun
+![screenshot](ibworkout.gif)
 
-Open [this link](https://ibworkout.netlify.app/) to view it live.
+---
 
-## Getting Started
+### 🔗 Live Demo
 
-### Setup
+Check it out live: [https://ibworkout.netlify.app/](https://ibworkout.netlify.app/)
+
+---
+
+## 🚀 Getting Started
+
+### 🧱 Setup
+
+Clone the repo:
 
 ```bash
-$ git clone https://github.com/vmwhoami/ibworkout-next
-$ cd ibworkout-next
-```
-
-First, run the development server:
-
-```bash
-bun dev
-# or
-yarn dev
-```
-
-## Author
-
-**Vitalie Melnic**
-
-- Github: [@vmwhoami](https://github.com/vmwhoami/)
-- Twitter: [@vmwhoami](https://twitter.com/vmwhoami)
-- Linkedin: [vitalie-melnic](https://www.linkedin.com/in/vitaliemelnic/)
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-
-## Show your support
-
-Give a ⭐️ if you like this project!
+git clone https://github.com/vmwhoami/ibworkout-next
+cd ibworkout-next

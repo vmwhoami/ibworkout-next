@@ -31,7 +31,7 @@ const How = () => {
         <motion.h2
           animate={inView ? visible : hidden}
           transition={textTransition}
-          className="p-20 text-2xl md:text-5xl md:p-10 font-bold text-gray-900 leading-tight"
+          className="p-10 text-5xl md:p-20 md:text-2xl font-bold text-gray-900 leading-tight"
         >
           Пора прокачать тело и дух на свежем воздухе
         </motion.h2>
