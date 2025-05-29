@@ -1,7 +1,7 @@
 ## About
 
-A side project for a fitness trainer. Built with Next Js. The form is sent through a node js (express) API hosted on Heroku. I am using SendGrid and node mailer to send the email.
-I used framer motion for the animations.
+A side project for a fitness trainer. Built with Next.js.
+I used Framer Motion for the animations.
 
 ![screenshot](animation.gif)
 
@@ -32,7 +32,7 @@ yarn dev
 
 - Github: [@vmwhoami](https://github.com/vmwhoami/)
 - Twitter: [@vmwhoami](https://twitter.com/vmwhoami)
-- Linkedin: [vitalie-melnic](https://www.linkedin.com/in/vitalie-melnic/)
+- Linkedin: [vitalie-melnic](https://www.linkedin.com/in/vitaliemelnic/)
 
 ## License
 
