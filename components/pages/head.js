@@ -59,7 +59,7 @@ export default function HomeHero() {
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <h3 class="text-2xl sm:text-3xl font-bold text-white-600 tracking-wide text-center drop-shadow-md">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white-600 tracking-wide text-center drop-shadow-md">
             В прямом эфире, где и когда вам удобно. Начните свой путь к здоровью уже сегодня.
           </h3>
   
