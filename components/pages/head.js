@@ -28,13 +28,13 @@ export default function HomeHero() {
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/70 to-transparent" />
       </div>
 
       {/* Content */}
       <motion.div
         ref={ref}
-        className="relative z-5 max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6"
+        className="relative max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
@@ -45,7 +45,7 @@ export default function HomeHero() {
         </motion.h1>
 
         <motion.h2
-          className="text-red-500 font-semibold text-xl sm:text-2xl"
+          className="text-red-100 font-semibold text-xl sm:text-2xl"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -59,7 +59,10 @@ export default function HomeHero() {
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          В прямом эфире, где и когда вам удобно. Начните свой путь к здоровью уже сегодня.
+          <h3 class="text-2xl sm:text-3xl font-bold text-white-600 tracking-wide text-center drop-shadow-md">
+            В прямом эфире, где и когда вам удобно. Начните свой путь к здоровью уже сегодня.
+          </h3>
+  
         </motion.div>
 
         <motion.div

@@ -21,7 +21,8 @@ const How = () => {
   const [ref, inView] = useInView();
 
   return (
-    <figure className="flex h-screen md:flex-col bg-gray-100 rounded-xl p-8 md:p-0">
+  <figure className="flex h-screen flex-col md:flex-row bg-gray-100 rounded-xl p-8 md:p-0">
+
       <motion.div
         animate={inView ? visible : hidden}
         transition={textTransition}
@@ -30,11 +31,11 @@ const How = () => {
         <motion.h2
           animate={inView ? visible : hidden}
           transition={textTransition}
-          className="p-20 text-2xl md:text-5xl font-bold text-gray-900 leading-tight"
+          className="p-20 text-2xl md:text-5xl md:p-10 font-bold text-gray-900 leading-tight"
         >
           Пора прокачать тело и дух на свежем воздухе
         </motion.h2>
-        <p className="p-20 text-2xl">
+        <p className="p-20 md:p-10 text-2xl">
           {" "}
           Забудьте душные залы. Тренируйтесь под открытым небом с
           профессионалом, который вдохновляет. Наши онлайн-сессии с видео
@@ -42,11 +43,11 @@ const How = () => {
           были.
         </p>
 
-        <span className="p-20 text-2xl font-semibold text-red-500">
+        <span className="p-10 text-2xl font-semibold text-red-500">
           Первая тренировка — со скидкой!
         </span>
       </motion.div>
-      <div className="flex-col md:flex-row w-full h-full pt-6 md:p-8 text-center md:text-left space-y-4">
+      <div className="flex-row  md:flex-col w-full h-full pt-6 md:p-8 text-center md:text-left space-y-4">
         <motion.div
           animate={inView ? visible : hidden}
           transition={videoTransition}
